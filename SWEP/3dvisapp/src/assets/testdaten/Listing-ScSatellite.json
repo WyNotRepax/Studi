@@ -1,0 +1,140 @@
+{
+    "meta": {
+        "listing": true,
+        "count": 5,
+        "countTotal": 5,
+        "start": 0,
+        "pageSize": 20,
+        "page": 1,
+        "sort": [],
+        "status": 200
+    },
+    "data": [
+        {
+            "ID": 3,
+            "OrganizationID": 1,
+            "ScSatelliteOperatorID": null,
+            "name": "G\u0026S Satellite X30",
+            "longitude": "10.00000000",
+            "orgUsageRestricted": true,
+            "_createdBy": 30,
+            "_createdAt": "2021-06-01 11:08:44",
+            "_modifiedBy": 30,
+            "_modifiedAt": "2021-06-02 11:46:38",
+            "_aggregatedModifiedBy": 30,
+            "_aggregatedModifiedAt": "2021-06-02 11:46:38",
+            "_displayName": "G\u0026S Satellite X30",
+            "_pk": {
+                "ID": 3
+            },
+            "_type": "ScSatellite",
+            "_fk_OrganizationID": "root",
+            "_fk_ScSatelliteOperatorID": null,
+            "_fk__createdBy": "JN",
+            "_fk__modifiedBy": "JN",
+            "_fk__aggregatedModifiedBy": "JN",
+            "_orgRestricted": false
+        },
+        {
+            "ID": 4,
+            "OrganizationID": 1,
+            "ScSatelliteOperatorID": null,
+            "name": "G\u0026S SatEast AA",
+            "longitude": "123.00000000",
+            "orgUsageRestricted": true,
+            "_createdBy": 30,
+            "_createdAt": "2021-06-01 12:22:21",
+            "_modifiedBy": null,
+            "_modifiedAt": null,
+            "_aggregatedModifiedBy": null,
+            "_aggregatedModifiedAt": null,
+            "_displayName": "G\u0026S SatEast AA",
+            "_pk": {
+                "ID": 4
+            },
+            "_type": "ScSatellite",
+            "_fk_OrganizationID": "root",
+            "_fk_ScSatelliteOperatorID": null,
+            "_fk__createdBy": "JN",
+            "_fk__modifiedBy": null,
+            "_fk__aggregatedModifiedBy": null,
+            "_orgRestricted": false
+        },
+        {
+            "ID": 5,
+            "OrganizationID": 1,
+            "ScSatelliteOperatorID": null,
+            "name": "G\u0026S SAT V23",
+            "longitude": "-60.00000000",
+            "orgUsageRestricted": true,
+            "_createdBy": 30,
+            "_createdAt": "2021-06-01 12:25:39",
+            "_modifiedBy": null,
+            "_modifiedAt": null,
+            "_aggregatedModifiedBy": null,
+            "_aggregatedModifiedAt": null,
+            "_displayName": "G\u0026S SAT V23",
+            "_pk": {
+                "ID": 5
+            },
+            "_type": "ScSatellite",
+            "_fk_OrganizationID": "root",
+            "_fk_ScSatelliteOperatorID": null,
+            "_fk__createdBy": "JN",
+            "_fk__modifiedBy": null,
+            "_fk__aggregatedModifiedBy": null,
+            "_orgRestricted": false
+        },
+        {
+            "ID": 6,
+            "OrganizationID": 1,
+            "ScSatelliteOperatorID": null,
+            "name": "G\u0026S Satellite 58333",
+            "longitude": "68.00000000",
+            "orgUsageRestricted": true,
+            "_createdBy": 30,
+            "_createdAt": "2021-06-01 12:28:17",
+            "_modifiedBy": null,
+            "_modifiedAt": null,
+            "_aggregatedModifiedBy": null,
+            "_aggregatedModifiedAt": null,
+            "_displayName": "G\u0026S Satellite 58333",
+            "_pk": {
+                "ID": 6
+            },
+            "_type": "ScSatellite",
+            "_fk_OrganizationID": "root",
+            "_fk_ScSatelliteOperatorID": null,
+            "_fk__createdBy": "JN",
+            "_fk__modifiedBy": null,
+            "_fk__aggregatedModifiedBy": null,
+            "_orgRestricted": false
+        },
+        {
+            "ID": 7,
+            "OrganizationID": 1,
+            "ScSatelliteOperatorID": null,
+            "name": "G\u0026S SpaceConnect 11",
+            "longitude": "24.00000000",
+            "orgUsageRestricted": true,
+            "_createdBy": 30,
+            "_createdAt": "2021-06-01 12:32:25",
+            "_modifiedBy": null,
+            "_modifiedAt": null,
+            "_aggregatedModifiedBy": null,
+            "_aggregatedModifiedAt": null,
+            "_displayName": "G\u0026S SpaceConnect 11",
+            "_pk": {
+                "ID": 7
+            },
+            "_type": "ScSatellite",
+            "_fk_OrganizationID": "root",
+            "_fk_ScSatelliteOperatorID": null,
+            "_fk__createdBy": "JN",
+            "_fk__modifiedBy": null,
+            "_fk__aggregatedModifiedBy": null,
+            "_orgRestricted": false
+        }
+    ],
+    "errors": []
+}

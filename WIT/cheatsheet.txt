@@ -1,0 +1,15 @@
+configure terminal -- Terminal Config
+
+enable -- Privileged Exec Modus
+
+no ip domain-lookup
+hostname S1/S2
+
+enable password class -- Im Config modus; setzt enable Passwort
+
+line con 0 -- Konfigurationsmodus für con 0
+line vty 0 4 -- Konfuigurationsmodus für vty 0 4
+password cisco -- Setzt Passwort
+login -- Login gefordert
+
+banner motd #Unbefugter Zugriff verboten.#

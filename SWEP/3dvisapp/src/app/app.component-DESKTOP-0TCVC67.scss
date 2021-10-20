@@ -1,0 +1,33 @@
+mat-toolbar {
+    position: relative;
+    height: 50px;
+    font-size: 1,5em;
+    
+    .nav-title{
+        color: #e1e6e7;
+        text-align: center;
+        margin: 5px;
+    }
+
+    .menu-btn {
+        border: none;
+        background: none;
+        cursor: pointer;
+        color: #e1e6e7;
+        margin: 5px;
+    }
+}
+
+
+mat-sidenav-container{
+    height: 100%;
+}
+
+mat-sidenav-content{
+    overflow: hidden;
+}
+:host{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}

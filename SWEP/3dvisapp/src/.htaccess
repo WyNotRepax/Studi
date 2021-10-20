@@ -1,0 +1,3 @@
+RewriteEngine on
+RewriteRule api/v1/obj/MapOverlay/([0-9]+)/geodata$ assets/testdaten/MapOverlay/geodata-$1.json [NC]
+RewriteRule api/v1/obj/([A-Za-a]+) assets/testdaten/Listing-$1.json [NC]

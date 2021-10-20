@@ -1,0 +1,742 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>6</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>372</x>
+      <y>66</y>
+      <w>84</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>style=autoresize
+&lt;&lt;entity&gt;&gt;
+Kunde
+--
+-kundennummer: int
+-name: string
+-firma: string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>954</x>
+      <y>24</y>
+      <w>102</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>style=autoresize
+&lt;&lt;entity&gt;&gt;
+Akku
+-
+-seriennummer: string
+-produktionsdatum: Date
+-reparaturanzahl:int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>762</x>
+      <y>24</y>
+      <w>60</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>style=autoresize
+&lt;&lt;entity&gt;&gt;
+AkkuEvent
+-
+#datum: Date</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>600</x>
+      <y>66</y>
+      <w>90</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>style=autoresize
+&lt;&lt;entity&gt;&gt;
+AkkuPruefungsEvent
+-
+-notiz: string
+-kapazität: float
+-ticketnummer: int
+-ladezyklen: int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>816</x>
+      <y>48</y>
+      <w>150</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=-
+r1=-events
+m1=*
+r2=-akku
+m2=1</panel_attributes>
+    <additional_attributes>10.0;20.0;230.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>450</x>
+      <y>84</y>
+      <w>162</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=-
+r2=-kunde
+m2=1
+r1=-events
+m1=*</panel_attributes>
+    <additional_attributes>10.0;20.0;250.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>684</x>
+      <y>60</y>
+      <w>120</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>180.0;10.0;180.0;60.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>570</x>
+      <y>144</y>
+      <w>120</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>style=autoresize
+&lt;&lt;entity&gt;&gt;
+AkkuReparaturEingangsEvent
+-
+-notiz: string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>564</x>
+      <y>192</y>
+      <w>126</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>style=autoresize
+&lt;&lt;entity&gt;&gt;
+AkkuReparaturAusgangsEvent
+-
+-notiz: string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>582</x>
+      <y>240</y>
+      <w>108</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>style=autoresize
+&lt;&lt;entity&gt;&gt;
+AkkuAusmusterungsEvent
+-
+-notiz: string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>378</x>
+      <y>102</y>
+      <w>234</w>
+      <h>306</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=*
+r2=-defekt
+m2=1</panel_attributes>
+    <additional_attributes>10.0;480.0;180.0;480.0;180.0;20.0;370.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>684</x>
+      <y>60</y>
+      <w>120</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>180.0;10.0;180.0;190.0;10.0;190.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>684</x>
+      <y>60</y>
+      <w>120</w>
+      <h>222</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>180.0;10.0;180.0;350.0;10.0;350.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>684</x>
+      <y>60</y>
+      <w>120</w>
+      <h>174</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>180.0;10.0;180.0;270.0;10.0;270.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>162</x>
+      <y>0</y>
+      <w>1068</w>
+      <h>342</h>
+    </coordinates>
+    <panel_attributes>domain.entity
+valign=top
+halign=left</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>162</x>
+      <y>348</y>
+      <w>1068</w>
+      <h>636</h>
+    </coordinates>
+    <panel_attributes>shared
+valign=top
+halign=left
+layer=-1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>258</x>
+      <y>360</y>
+      <w>126</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>style=autoresize
+&lt;&lt;enumeration&gt;&gt;
+AkkuDefekt
+-
++code: float {readOnly}
++description: String {readOnly}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1050</x>
+      <y>906</y>
+      <w>168</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>style=autoresize
+&lt;&lt;interface&gt;&gt;
+AkkuVitaRequestFactory
+--
++akkuReqest(): AkkuRequest
++akkuEventRequest(): AkkuEventRequest
++ kundeRequest(): KundeRequest</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>168</x>
+      <y>420</y>
+      <w>1056</w>
+      <h>408</h>
+    </coordinates>
+    <panel_attributes>proxy
+valign=top
+halign=left</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>828</x>
+      <y>852</y>
+      <w>216</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>style=autoresize
+&lt;&lt;interface&gt;&gt;
+AkkuRequest
+--
++persist(): InstanceRequest&lt;AkkuProxy, Void&gt;
++findAkku(seriennummer: String): Request&lt;AkkuProxy&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>600</x>
+      <y>852</y>
+      <w>210</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>style=autoresize
+&lt;&lt;interface&gt;&gt;
+AkkuEventRequest
+--
++persist(): InstanceRequest&lt;AkkuEv entProxy, Void&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>204</x>
+      <y>852</y>
+      <w>240</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>style=autoresize
+&lt;&lt;interface&gt;&gt;
+KundeRequest
+--
++persist(): InstanceRequest&lt;KundeProxy, Void&gt;
++findKunde(kundennummer: Integer): Request&lt;KundeProxy&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>546</x>
+      <y>510</y>
+      <w>144</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>style=autoresize
+&lt;&lt;interface&gt;&gt;
+AkkuPruefungsEventProxy
+-
++getNotiz(): String
++setNotiz(notiz: String)
++getKapazitaet(): Float
++setKapazitaet(kapazitaet: Float)
++getTicketnr(): Integer
++setTicketnr(ticketnr: Integer)
++getLadezyklen(): Integer
++setLadezyklen(ladezyklen: Integer)
++getDefekt(): AkkuDefekt
++setDefekt(defekt: AkkuDefekt)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>564</x>
+      <y>768</y>
+      <w>126</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>style=autoresize
+&lt;&lt;interface&gt;&gt;
+AkkuAusmusterungsEventProxy
+-
++getNotiz(): String
++setNotiz(notiz: String)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>546</x>
+      <y>708</y>
+      <w>144</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>style=autoresize
+&lt;&lt;interface&gt;&gt;
+AkkuReparaturAusgangsEventProxy
+-
++getNotiz(): String
++setNotiz(notiz: String)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>546</x>
+      <y>648</y>
+      <w>144</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>style=autoresize
+&lt;&lt;interface&gt;&gt;
+AkkuReparaturEingangsEventProxy
+-
++getNotiz(): String
++setNotiz(notiz: String)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>696</x>
+      <y>438</y>
+      <w>114</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>style=autoresize
+&lt;&lt;interface&gt;&gt;
+AkkuEventProxy
+--
++getDate(): Date
++setDate(Date date)
++getAkku(): AkkuProxy
++setAkku(akku: AkkuProxy)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>168</x>
+      <y>834</y>
+      <w>1056</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>service
+valign=top
+halign=left
+layer=-1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>684</x>
+      <y>504</y>
+      <w>84</w>
+      <h>246</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>120.0;10.0;120.0;390.0;10.0;390.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>684</x>
+      <y>504</y>
+      <w>84</w>
+      <h>186</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>120.0;10.0;120.0;290.0;10.0;290.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>684</x>
+      <y>504</y>
+      <w>84</w>
+      <h>306</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>120.0;10.0;120.0;490.0;10.0;490.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>684</x>
+      <y>504</y>
+      <w>84</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>120.0;10.0;120.0;60.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>858</x>
+      <y>438</y>
+      <w>186</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>style=autoresize
+&lt;&lt;interface&gt;&gt;
+AkkuProxy
+
+--
++getSeriennummer(): String
++setSetriennummer(seriennummer: String)
++getProduktionsdatum(): Date
++setProduktionsdatum(produktionsdatum: Date)
++getReparaturanzahl(): Integer
++setReperaturanzahl(reperaturanzahl: Integer)
++getEvents(): Set&lt;AkkuEventProxy&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>264</x>
+      <y>438</y>
+      <w>180</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>style=autoresize
+&lt;&lt;interface&gt;&gt;
+KundeProxy
+
+--
++getKundennummer(): Integer
++setKundennummer(kundennummer: Integer)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>432</x>
+      <y>126</y>
+      <w>18</w>
+      <h>324</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;520.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>798</x>
+      <y>60</y>
+      <w>18</w>
+      <h>390</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;630.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>534</x>
+      <y>126</y>
+      <w>78</w>
+      <h>402</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>110.0;10.0;10.0;10.0;10.0;650.0;20.0;650.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>528</x>
+      <y>174</y>
+      <w>54</w>
+      <h>492</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>70.0;10.0;10.0;10.0;10.0;800.0;30.0;800.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>522</x>
+      <y>216</y>
+      <w>54</w>
+      <h>510</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>70.0;10.0;10.0;10.0;10.0;830.0;40.0;830.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>516</x>
+      <y>264</y>
+      <w>78</w>
+      <h>522</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>110.0;10.0;10.0;10.0;10.0;850.0;80.0;850.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1032</x>
+      <y>84</y>
+      <w>18</w>
+      <h>366</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;590.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1038</x>
+      <y>84</y>
+      <w>24</w>
+      <h>786</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>20.0;10.0;20.0;1290.0;10.0;1290.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>804</x>
+      <y>60</y>
+      <w>24</w>
+      <h>810</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>20.0;10.0;20.0;1330.0;10.0;1330.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>438</x>
+      <y>126</y>
+      <w>24</w>
+      <h>744</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>20.0;10.0;20.0;1220.0;10.0;1220.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>684</x>
+      <y>540</y>
+      <w>42</w>
+      <h>324</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;50.0;10.0;50.0;520.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>684</x>
+      <y>678</y>
+      <w>36</w>
+      <h>186</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;40.0;10.0;40.0;290.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>684</x>
+      <y>738</y>
+      <w>30</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;30.0;10.0;30.0;190.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>684</x>
+      <y>798</y>
+      <w>24</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;20.0;10.0;20.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>798</x>
+      <y>504</y>
+      <w>18</w>
+      <h>360</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;580.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1032</x>
+      <y>546</y>
+      <w>18</w>
+      <h>318</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;510.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>432</x>
+      <y>498</y>
+      <w>18</w>
+      <h>366</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;590.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1032</x>
+      <y>900</y>
+      <w>30</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0;30.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>798</x>
+      <y>888</y>
+      <w>264</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0;420.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>432</x>
+      <y>900</y>
+      <w>630</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0;1030.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>240</x>
+      <y>360</y>
+      <w>318</w>
+      <h>276</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>30.0;10.0;10.0;10.0;10.0;440.0;510.0;440.0</additional_attributes>
+  </element>
+</diagram>

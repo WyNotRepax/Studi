@@ -1,0 +1,38 @@
+<div #refEl id="tooltip" [@state]="(uiService.hoveredObjectId | async) != null ? 'visible' : 'hidden'" [ngStyle]="calcPos(uiService.hoverPosition | async)">
+    <div class="header-container">
+        <h2 id="objName" *ngIf="satelliteData | async as satellite">{{satellite.name}}</h2>
+        <h2 id="objName" *ngIf="terminalData | async as terminal">{{terminal.name}}</h2>
+    </div>
+    <div class="content-conainer">
+        <table>
+            <tr *ngIf="terminalData | async as terminal">
+                <th>Id</th>
+                <td>{{terminal.id}}</td>
+            </tr>
+
+            <tr *ngIf="satelliteData | async as satellite">
+                <th>Id</th>
+                <td>{{satellite.id}}</td>
+            </tr>
+
+            <tr *ngIf="terminalData | async as terminal">
+                <th>Mobility Type</th>
+                <td>{{terminal.mobilityType}}</td>
+            </tr>
+
+            <tr *ngIf="terminalLiveData | async as terminalLiveData">
+                <th>Längengrad</th>
+                <td>{{terminalLiveData.longitude}}</td>
+            </tr>
+            <tr *ngIf="satelliteData | async as satellite">
+                <th>Längengrad</th>
+                <td>{{satellite.longitude}}</td>
+            </tr>
+
+            <tr *ngIf="terminalLiveData | async as terminalLiveData">
+                <th>Breitengrad</th>
+                <td>{{terminalLiveData.latitude}}</td>
+            </tr>
+        </table>
+    </div>
+</div>

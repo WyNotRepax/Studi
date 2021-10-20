@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <title>Alle Bücher</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="./index.html">Bücher</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+            aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item active" >
+                <a class="nav-link" href="./allbooks.html">Alle Bücher
+                    <span class="sr-only">(current)</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./mybooks.html">Meine Bücher</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./profile.html">Profil</a>
+            </li>
+        </ul>
+        <button class="btn btn-secondary my-2 my-sm-0" data-toggle="modal" data-target="#logoutModal">Abmelden</button>
+    </div>
+</nav>
+<!-- Logout Modal -->
+<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="logoutModalLabel">Abmeldung erfolgreich</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Sie wurden erfolgreich abgemeldet.
+                Sie können diese Seite jetzt schließen.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" >Schließen</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Add Book Modal-->
+
+<div class="modal fade" id="addBookModal" tabindex="-1" role="dialog" aria-labelledby="addBookModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addBookModalLabel">Add Book</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="needs-validation" id="addBookForm" novalidate>
+                    <div class="form-group has-success">
+                        <label class="form-control-label" for="isbn">ISBN:</label>
+                        <input type="number" min="1000000000" max="9999999999999" class="form-control" id="isbn" name="isbn" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="titel" class="col-form-label">Titel:</label>
+                        <input type="text" class="form-control" id="titel" name="title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="autor" class="col-form-label">Autor:</label>
+                        <input type="text" class="form-control" id="autor" readonly value="TestAuthor"  name="author" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="jahr">Erscheinungsjahr:</label>
+                        <input type="number" min="1500" max="2999" value="2021" class="form-control" id="jahr" name="year" required>
+                    </div>
+                    <div class="form-group has-success">
+                        <label class="form-control-label" for="seiten">Seiten:</label>
+                        <input type="number" min="1" step="1" value="1" class="form-control" id="seiten" name="pageNumber" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="verlag" class="col-form-label">Verlag:</label>
+                        <input type="text" class="form-control" id="verlag" name="publisher" required>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary"data-dismiss="modal"  >Close</button>
+                <button type="button" class="btn btn-primary"  id="addBookButton">Add</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-lg">
+    <h1>Alle Bücher</h1>
+    <p class="my-1">
+        <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#addBookModal" >Add Book</button>
+    </p>
+
+<table class="table table-striped">
+    <thead class="thead-light">
+    <tr>
+        <th scope="col">ISBN</th>
+        <th scope="col">Titel</th>
+        <th scope="col">Autor</th>
+        <th scope="col">Erscheinungsjahr</th>
+        <th scope="col">Seiten</th>
+        <th scope="col">Verlag</th>
+    </tr>
+    </thead>
+    <tbody id="bookTableBody">
+    </tbody>
+</table>
+</div>
+
+<script src="js/jquery-3.6.0.js"></script>
+<script src="js/bootstrap.bundle.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

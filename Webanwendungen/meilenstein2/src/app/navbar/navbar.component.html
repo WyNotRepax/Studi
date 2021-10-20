@@ -1,0 +1,24 @@
+<nav ngbNav [activeId]="getLocation()" class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" [routerLink]="'.'">Bücher</a>
+  <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse" id="navbarColor01">
+    <ul class="navbar-nav mr-auto">
+      <li ngbNavItem="home" class="nav-item">
+        <a ngbNavLink class="nav-link" ngbI [routerLink]="('.')">Home</a>
+      </li>
+      <li ngbNavItem="allbooks" class="nav-item">
+        <a ngbNavLink class="nav-link" [routerLink]="('allbooks')">Alle Bücher</a>
+      </li>
+      <li ngbNavItem="mybooks" class="nav-item">
+        <a ngbNavLink class="nav-link" [routerLink]="('mybooks')">Meine Bücher</a>
+      </li>
+      <li ngbNavItem="profile" class="nav-item">
+        <a ngbNavLink class="nav-link" [routerLink]="('profile')">Profil</a>
+      </li>
+    </ul>
+    <button class="btn btn-secondary my-2 my-sm-0" data-toggle="modal" data-target="#logoutModal">Abmelden</button>
+  </div>
+</nav>

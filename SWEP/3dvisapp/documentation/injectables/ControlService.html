@@ -1,0 +1,1635 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>three-d-vis-app documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">three-d-vis-app documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li>ControlService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/service/control/control.service.ts</code>
+        </p>
+
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Service for controlling the position of the camera</p>
+
+            </p>
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#controls">controls</a>
+                            </li>
+                            <li>
+                                <a href="#el">el</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#keyboardRotateFactor">keyboardRotateFactor</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#keyboardZoomFactor">keyboardZoomFactor</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#keysPressed">keysPressed</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#orbitControls">orbitControls</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#rotateFactor">rotateFactor</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#scrollFactor">scrollFactor</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#surfaceAlt">surfaceAlt</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#addKeyboardEvents">addKeyboardEvents</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#createEventListener">createEventListener</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getOrbitControls">getOrbitControls</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#initKeyboardControls">initKeyboardControls</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#initOrbitControls">initOrbitControls</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#isKeyDown">isKeyDown</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#isKeyUp">isKeyUp</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#onZoom">onZoom</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#updateCamOnKeyInput">updateCamOnKeyInput</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#updateSpeed">updateSpeed</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor()</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/app/service/control/control.service.ts:52</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Default constructor</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addKeyboardEvents"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            addKeyboardEvents
+                        </b>
+                        <a href="#addKeyboardEvents"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>addKeyboardEvents(canvas: HTMLCanvasElement)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="182"
+                            class="link-to-prism">src/app/service/control/control.service.ts:182</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Adds an eventlistener for keyboardevents</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>canvas</td>
+                                    <td>
+                                            <code>HTMLCanvasElement</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>canvas of the scene</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createEventListener"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            createEventListener
+                        </b>
+                        <a href="#createEventListener"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>createEventListener(canvas: HTMLCanvasElement)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="94"
+                            class="link-to-prism">src/app/service/control/control.service.ts:94</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Creates an eventlistener for the mousewheel</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>canvas</td>
+                                    <td>
+                                            <code>HTMLCanvasElement</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>canvas of the scene</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getOrbitControls"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            getOrbitControls
+                        </b>
+                        <a href="#getOrbitControls"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getOrbitControls()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="105"
+                            class="link-to-prism">src/app/service/control/control.service.ts:105</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Getter for orbitcontrols</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>CameraControls</code>
+
+                    </div>
+                    <div class="io-description">
+                        <ul>
+<li>CameraControls orbtitcontrolls</li>
+</ul>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="initKeyboardControls"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            initKeyboardControls
+                        </b>
+                        <a href="#initKeyboardControls"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>initKeyboardControls(configData: <a href="../classes/ConfigData.html">Promise<ConfigData></a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="164"
+                            class="link-to-prism">src/app/service/control/control.service.ts:164</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Initializes the keyboardcontrols</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>configData</td>
+                                    <td>
+                                                <code><a href="../classes/ConfigData.html" target="_self" >Promise&lt;ConfigData&gt;</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>data from the config file</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="initOrbitControls"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            initOrbitControls
+                        </b>
+                        <a href="#initOrbitControls"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>initOrbitControls(surfaceAlt: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, camera: THREE.PerspectiveCamera, canvas: HTMLCanvasElement, configData: Promise<any>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="71"
+                            class="link-to-prism">src/app/service/control/control.service.ts:71</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Initializes the orbit controls</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>surfaceAlt</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>surfacealtitude of the orbit</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>camera</td>
+                                    <td>
+                                            <code>THREE.PerspectiveCamera</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>-camera of the scene</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>canvas</td>
+                                    <td>
+                                            <code>HTMLCanvasElement</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>canvas from the scene</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>configData</td>
+                                    <td>
+                                            <code>Promise&lt;any&gt;</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>data from the config file</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isKeyDown"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            isKeyDown
+                        </b>
+                        <a href="#isKeyDown"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>isKeyDown(e)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="193"
+                            class="link-to-prism">src/app/service/control/control.service.ts:193</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Checks if key is pressed</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>e</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>triggered event</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isKeyUp"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            isKeyUp
+                        </b>
+                        <a href="#isKeyUp"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>isKeyUp(e)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="208"
+                            class="link-to-prism">src/app/service/control/control.service.ts:208</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Checks if key is not pressed</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>e</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>triggered eventtriggered event</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onZoom"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            onZoom
+                        </b>
+                        <a href="#onZoom"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>onZoom(e)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="223"
+                            class="link-to-prism">src/app/service/control/control.service.ts:223</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Checks if client zooms</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>e</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>triggered event</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateCamOnKeyInput"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            updateCamOnKeyInput
+                        </b>
+                        <a href="#updateCamOnKeyInput"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>updateCamOnKeyInput()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="114"
+                            class="link-to-prism">src/app/service/control/control.service.ts:114</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Updates the camera position when a key is pressed</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateSpeed"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            updateSpeed
+                        </b>
+                        <a href="#updateSpeed"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>updateSpeed()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="236"
+                            class="link-to-prism">src/app/service/control/control.service.ts:236</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Updates the speed of the rotation and zoom based on camera distance</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+            <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="controls"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            controls</b>
+                            <a href="#controls"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{}</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/service/control/control.service.ts:28</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Empty object to map keyboard inputs</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="el"></a>
+                        <span class="name">
+                            <b>
+                            el</b>
+                            <a href="#el"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://angular.io/api/core/ElementRef" target="_blank" >ElementRef</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @ViewChild(&#x27;refEl&#x27;)<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/service/control/control.service.ts:20</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>HTML hover window</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="keyboardRotateFactor"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            keyboardRotateFactor</b>
+                            <a href="#keyboardRotateFactor"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>0.03</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">src/app/service/control/control.service.ts:48</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Factor to adjust rotate speed with keyboard input</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="keyboardZoomFactor"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            keyboardZoomFactor</b>
+                            <a href="#keyboardZoomFactor"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>1</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/app/service/control/control.service.ts:52</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Factor to adjust zoomspeed with keyboard input</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="keysPressed"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            keysPressed</b>
+                            <a href="#keysPressed"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{}</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/service/control/control.service.ts:32</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Empty object to map pressed keys</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="orbitControls"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            orbitControls</b>
+                            <a href="#orbitControls"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>CameraControls</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/service/control/control.service.ts:24</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Orbit controls variable</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="rotateFactor"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            rotateFactor</b>
+                            <a href="#rotateFactor"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>0.005</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/service/control/control.service.ts:40</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Factor to adjust ratation speed based on zoom level</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="scrollFactor"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            scrollFactor</b>
+                            <a href="#scrollFactor"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>0.005</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/app/service/control/control.service.ts:44</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Factor to adjust scroll speed based on zoom level</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="surfaceAlt"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            surfaceAlt</b>
+                            <a href="#surfaceAlt"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/service/control/control.service.ts:36</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Surface altitude of the earth object</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable, ViewChild } from &quot;@angular/core&quot;;
+import * as THREE from &quot;three&quot;;
+import CameraControls from &quot;camera-controls&quot;;
+import { ElementRef } from &quot;@angular/core&quot;;
+import { ConfigData } from &quot;@service/configuration/config-data.class&quot;;
+
+CameraControls.install({ THREE: THREE });
+
+/**
+ * Service for controlling the position of the camera
+ */
+@Injectable({
+  providedIn: &quot;root&quot;
+})
+export class ControlService {
+
+  /**
+   * HTML hover window
+   */
+  @ViewChild(&quot;refEl&quot;) el: ElementRef;
+  /**
+   * Orbit controls variable
+   */
+  private orbitControls: CameraControls;
+  /**
+   * Empty object to map keyboard inputs
+   */
+  private controls &#x3D; {};
+  /**
+   * Empty object to map pressed keys
+   */
+  private keysPressed &#x3D; {};
+  /**
+   * Surface altitude of the earth object
+   */
+  private surfaceAlt:number;
+  /**
+   * Factor to adjust ratation speed based on zoom level
+   */
+  private rotateFactor:number &#x3D; 0.005;
+  /**
+   * Factor to adjust scroll speed based on zoom level
+   */
+  private scrollFactor:number &#x3D; 0.005;
+  /**
+   * Factor to adjust rotate speed with keyboard input
+   */
+  private keyboardRotateFactor:number &#x3D; 0.03;
+  /**
+   * Factor to adjust zoomspeed with keyboard input
+   */
+  private keyboardZoomFactor:number &#x3D; 1;
+
+  /**
+   * Default constructor
+   */
+  constructor() { }
+
+  // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;
+  // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; PUBLIC FUNCTIONS &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;
+  // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;
+
+   /**
+   * Initializes the orbit controls
+   * 
+   * @param surfaceAlt - surfacealtitude of the orbit
+   * @param camera -camera of the scene
+   * @param canvas - canvas from the scene
+   * @param configData - data from the config file
+   */
+  public initOrbitControls(surfaceAlt:number, camera: THREE.PerspectiveCamera, canvas: HTMLCanvasElement, configData:Promise&lt;any&gt;): void {
+
+    this.surfaceAlt &#x3D; surfaceAlt;
+    this.orbitControls &#x3D; new CameraControls(camera, canvas);
+    this.orbitControls.minDistance &#x3D; 90.01;
+    this.orbitControls.maxDistance &#x3D; 250;
+    this.orbitControls.dampingFactor &#x3D; 0.1;
+    this.orbitControls.mouseButtons.left &#x3D; CameraControls.ACTION.ROTATE;
+    this.orbitControls.mouseButtons.wheel &#x3D; CameraControls.ACTION.DOLLY;
+    this.orbitControls.mouseButtons.right &#x3D; CameraControls.ACTION.NONE;
+    this.orbitControls.mouseButtons.middle &#x3D; CameraControls.ACTION.NONE;
+
+    this.updateSpeed();
+    this.initKeyboardControls(configData);
+    this.addKeyboardEvents(canvas);
+
+  }
+
+   /**
+   * Creates an eventlistener for the mousewheel
+   * 
+   * @param canvas - canvas of the scene
+   */
+  public createEventListener(canvas: HTMLCanvasElement): void {
+
+    canvas.addEventListener(&quot;wheel&quot;, (e) &#x3D;&gt; this.onZoom(e));
+
+  }
+
+  /**
+   * Getter for orbitcontrols
+   * 
+   * @returns - CameraControls orbtitcontrolls
+   */
+  public getOrbitControls(): CameraControls {
+
+    return this.orbitControls;
+
+  }
+
+  /**
+   * Updates the camera position when a key is pressed
+   */
+  public updateCamOnKeyInput(): void {
+
+    let left &#x3D; this.keysPressed[this.controls[ControlKeys.LEFT]];
+    let right &#x3D; this.keysPressed[this.controls[ControlKeys.RIGHT]];
+    let up &#x3D; this.keysPressed[this.controls[ControlKeys.UP]];
+    let down &#x3D; this.keysPressed[this.controls[ControlKeys.DOWN]];
+    let zoomin &#x3D; this.keysPressed[this.controls[ControlKeys.ZOOMIN]];
+    let zoomout &#x3D; this.keysPressed[this.controls[ControlKeys.ZOOMOUT]];
+
+    if (left &amp;&amp; !right &amp;&amp; !up &amp;&amp; !down) {
+      this.orbitControls.rotate(-(this.orbitControls.azimuthRotateSpeed * this.keyboardRotateFactor), 0, true);
+    } else if (left &amp;&amp; up &amp;&amp; !right &amp;&amp; !down) {
+      this.orbitControls.rotate(-(this.orbitControls.azimuthRotateSpeed * this.keyboardRotateFactor), -(this.orbitControls.polarRotateSpeed * this.keyboardRotateFactor), true);
+    } else if (left &amp;&amp; down &amp;&amp; !right &amp;&amp; !up) {
+      this.orbitControls.rotate(-(this.orbitControls.azimuthRotateSpeed * this.keyboardRotateFactor), (this.orbitControls.polarRotateSpeed * this.keyboardRotateFactor), true);
+    }
+    //right multi-key controls
+    else if (right &amp;&amp; !left &amp;&amp; !up &amp;&amp; !down) {
+      this.orbitControls.rotate((this.orbitControls.azimuthRotateSpeed * this.keyboardRotateFactor), 0, true);
+    } else if (right &amp;&amp; up &amp;&amp; !left &amp;&amp; !down) {
+      this.orbitControls.rotate((this.orbitControls.azimuthRotateSpeed * this.keyboardRotateFactor), -(this.orbitControls.polarRotateSpeed * this.keyboardRotateFactor), true);
+    } else if (right &amp;&amp; down &amp;&amp; !up &amp;&amp; !left) {
+      this.orbitControls.rotate((this.orbitControls.azimuthRotateSpeed * this.keyboardRotateFactor), (this.orbitControls.polarRotateSpeed * this.keyboardRotateFactor), true);
+    }
+    //up&amp;down key-controls
+    else if (up &amp;&amp; !right &amp;&amp; !left &amp;&amp; !down) {
+      this.orbitControls.rotate(0, -(this.orbitControls.polarRotateSpeed * this.keyboardRotateFactor), true);
+    } else if (down &amp;&amp; !right &amp;&amp; !up &amp;&amp; !left) {
+      this.orbitControls.rotate(0, (this.orbitControls.polarRotateSpeed * this.keyboardRotateFactor), true);
+    }
+    //zoom key-controls
+    else if (zoomin) {
+      this.orbitControls.dolly(this.keyboardZoomFactor * this.orbitControls.dollySpeed);
+      this.updateSpeed();
+    } else if (zoomout) {
+      this.orbitControls.dolly(-(this.keyboardZoomFactor * this.orbitControls.dollySpeed));
+      this.updateSpeed();
+    }
+
+  }
+
+  // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;
+  // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; PRIVATE FUNCTIONS &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;
+  // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;
+
+  /**
+   * Initializes the keyboardcontrols
+   * 
+   * @param configData - data from the config file
+   */
+  private initKeyboardControls(configData: Promise&lt;ConfigData&gt;): void {
+
+    configData.then(data &#x3D;&gt; {
+      this.controls[ControlKeys.LEFT] &#x3D; data.left;
+      this.controls[ControlKeys.RIGHT] &#x3D; data.right;
+      this.controls[ControlKeys.UP] &#x3D; data.up;
+      this.controls[ControlKeys.DOWN] &#x3D; data.down;
+      this.controls[ControlKeys.ZOOMIN] &#x3D; data.zoomin;
+      this.controls[ControlKeys.ZOOMOUT] &#x3D; data.zoomout;
+    });
+
+  }
+
+  /**
+   * Adds an eventlistener for keyboardevents
+   * 
+   * @param canvas - canvas of the scene
+   */
+  private addKeyboardEvents(canvas: HTMLCanvasElement): void {
+
+    canvas.addEventListener(&quot;keydown&quot;, (e) &#x3D;&gt; this.isKeyDown(e));
+    canvas.addEventListener(&quot;keyup&quot;, (e) &#x3D;&gt; this.isKeyUp(e));
+
+  }
+  /**
+   * Checks if key is pressed
+   * 
+   * @param e - triggered event
+   */
+  private isKeyDown(e): void {
+
+    e.preventDefault();
+
+    if (e.key &#x3D;&#x3D;&#x3D; this.controls[ControlKeys.LEFT] || e.key &#x3D;&#x3D;&#x3D; this.controls[ControlKeys.RIGHT] || e.key &#x3D;&#x3D;&#x3D; this.controls[ControlKeys.UP] || e.key &#x3D;&#x3D;&#x3D; this.controls[ControlKeys.DOWN] || e.key &#x3D;&#x3D;&#x3D; this.controls[ControlKeys.ZOOMIN] || e.key &#x3D;&#x3D;&#x3D; this.controls[ControlKeys.ZOOMOUT]) {
+      this.keysPressed[e.key] &#x3D; true;
+    }
+
+  }
+
+   /**
+   * Checks if key is not pressed
+   * 
+   * @param e - triggered eventtriggered event
+   */
+  private isKeyUp(e): void {
+
+    e.preventDefault();
+
+    if (e.key &#x3D;&#x3D;&#x3D; this.controls[ControlKeys.LEFT] || e.key &#x3D;&#x3D;&#x3D; this.controls[ControlKeys.RIGHT] || e.key &#x3D;&#x3D;&#x3D; this.controls[ControlKeys.UP] || e.key &#x3D;&#x3D;&#x3D; this.controls[ControlKeys.DOWN] || e.key &#x3D;&#x3D;&#x3D; this.controls[ControlKeys.ZOOMIN] || e.key &#x3D;&#x3D;&#x3D; this.controls[ControlKeys.ZOOMOUT]) {
+      this.keysPressed[e.key] &#x3D; false;
+    }
+
+  }
+
+  /**
+   * Checks if client zooms
+   * 
+   * @param e - triggered event
+   */
+  private onZoom(e): void {
+
+    e.preventDefault();
+
+    if (e.deltaY !&#x3D;&#x3D; 0) {
+      this.updateSpeed();
+    }
+
+  }
+
+  /**
+   * Updates the speed of the rotation and zoom based on camera distance
+   */
+  private updateSpeed(): void {
+
+    let speed:number &#x3D; (this.orbitControls.distance - this.surfaceAlt);
+    this.orbitControls.azimuthRotateSpeed &#x3D; speed * this.rotateFactor;
+    this.orbitControls.polarRotateSpeed &#x3D; speed * this.rotateFactor;
+    this.orbitControls.dollySpeed &#x3D; speed * this.scrollFactor;
+
+  }
+
+}
+
+/**
+ * Enum for ControlKeys
+ */
+export enum ControlKeys {
+  LEFT &#x3D; &quot;left&quot;,
+  RIGHT &#x3D; &quot;right&quot;,
+  UP &#x3D; &quot;up&quot;,
+  DOWN &#x3D; &quot;down&quot;,
+  ZOOMIN &#x3D; &quot;zoomin&quot;,
+  ZOOMOUT &#x3D; &quot;zoomout&quot;
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'ControlService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

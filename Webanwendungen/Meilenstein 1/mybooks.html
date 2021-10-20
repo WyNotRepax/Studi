@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <title>Meine Bücher</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="./index.html">Bücher</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+            aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item" >
+                <a class="nav-link" href="./allbooks.html">Alle Bücher</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="./mybooks.html">Meine Bücher
+                    <span class="sr-only">(current)</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./profile.html">Profil</a>
+            </li>
+        </ul>
+        <button class="btn btn-secondary my-2 my-sm-0" data-toggle="modal" data-target="#logoutModal">Abmelden</button>
+    </div>
+</nav>
+<!-- Logout Modal -->
+<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="logoutModalLabel">Abmeldung erfolgreich</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Sie wurden erfolgreich abgemeldet.
+                Sie können diese Seite jetzt schließen.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" >Schließen</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-lg">
+<h1>Meine Bücher</h1>
+
+<div>
+    <button type="button" class="btn btn-primary">Add</button>
+    <button type="button" class="btn btn-warning">Chance</button>
+    <button type="button" class="btn btn-danger">Delete</button>
+</div>
+
+    <table class="table table-striped">
+        <thead class="thead-light">
+            <tr>
+                <th scope="col">ISBN</th>
+                <th scope="col">Titel</th>
+                <th scope="col">Erscheinungsjahr</th>
+                <th scope="col">Seiten</th>
+                <th scope="col">Verlag</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+                <td>Column content</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<script src="js/jquery-3.6.0.js"></script>
+<script src="js/bootstrap.bundle.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

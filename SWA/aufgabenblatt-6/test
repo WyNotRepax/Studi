@@ -1,0 +1,114 @@
+#!/bin/bash
+
+BASE_URL='http://localhost:8080'
+KUNDEN_URL=$BASE_URL'/kunden'
+TESTDIR="./tests/"
+
+function create_kunde {
+    curl -X 'POST' $KUNDEN_URL'?nachname='$1'&vorname='$2 -d ''
+}
+
+function create_kunde_async {
+    curl -X 'POST' $KUNDEN_URL'?nachname='$1'&vorname='$2 -d '' &
+}
+
+function create_adresse {
+    curl -X 'POST' $KUNDEN_URL'/'$1'/adresse' \
+    -H 'Content-Type: application/json' \
+    -d '{
+            "hausnummer": "'$2'",
+            "ort": "'$3'",
+            "plz": "'$4'",
+            "strasse": "'$5'"
+        }'
+}
+
+function create_adresse_async {
+    curl -X 'POST' $KUNDEN_URL'/'$1'/adresse' \
+    -H 'Content-Type: application/json' \
+    -d '{
+            "hausnummer": "'$2'",
+            "ort": "'$3'",
+            "plz": "'$4'",
+            "strasse": "'$5'"
+        }' &
+}
+
+function change_adresse {
+    curl -X 'PUT' $KUNDEN_URL'/'$1'/adresse' \
+    -H 'Content-Type: application/json' \
+    -d '{
+            "hausnummer": "'$2'",
+            "ort": "'$3'",
+            "plz": "'$4'",
+            "strasse": "'$5'"
+        }' 
+}
+
+function change_adresse_async {
+    curl -X 'PUT' $KUNDEN_URL'/'$1'/adresse' \
+    -H 'Content-Type: application/json' \
+    -d '{
+            "hausnummer": "'$2'",
+            "ort": "'$3'",
+            "plz": "'$4'",
+            "strasse": "'$5'"
+        }' &
+}
+
+function get_state {
+    curl \
+    -o $TESTDIR$1 \
+    -X 'GET' \
+    $KUNDEN_URL \
+    -H 'accept: */*'
+}
+
+function get_state_async {
+    curl \
+    -o $1 \
+    -X 'GET' \
+    $KUNDEN_URL \
+    -H 'accept: */*' &
+}
+
+if [ ! -d $TESTDIR ]
+then
+    mkdir $TESTDIR
+fi
+
+if [ $1=ASYNC ]
+then
+    get_state checkpoint0.json
+
+    create_kunde_async Vorname1 Nachname1
+    create_kunde_async Vorname2 Nachname2
+
+    get_state checkpoint1.json
+
+    create_adresse_async 1 Dies ist die Adresse1
+    create_adresse_async 2 Dies ist die Adresse2
+
+    get_state checkpoint2.json
+
+    change_adresse_async 1 Ist dies eine Adresse1
+    change_adresse_async 2 Ist dies eine Adresse2
+
+    get_state checkpoint3.json
+
+
+else
+    get_state checkpoint0.json
+
+    create_kunde Vorname Nachname
+
+    get_state checkpoint1.json
+
+    create_adresse 1 Dies ist die Adresse
+
+    get_state checkpoint2.json
+
+    change_adresse 1 Ist dies eine Adresse
+
+    get_state checkpoint3.json
+fi

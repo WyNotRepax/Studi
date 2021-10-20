@@ -1,0 +1,62 @@
+#tooltip{
+    position: absolute;
+    height: auto;
+    width: auto;
+    min-width: 250px;
+    background-color: rgba($color: #212121, $alpha: 0.9);
+    padding: 5px 15px 5px 15px;
+    flex-direction: row;
+    font-family: "Poppins", sans-serif;
+    border-radius: 10px;
+    color: #d6dbdd;
+    opacity: 2;
+    box-shadow: 2px 2px 10px -5px rgba($color: #d6dbdd, $alpha: 0.8);
+
+    .header-container{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 10px;
+        margin-left: 5px;
+
+        #objName{
+            margin: 0;
+        }
+
+        #objType{
+            letter-spacing: 0.04rem;
+        }
+    }
+
+    .content-conainer{
+        margin-bottom: 10px;
+        margin-left: 5px;
+        color: #d3e0e7;
+       
+        table{
+            width: 100%;
+        }
+
+        th{
+            font-weight: lighter;
+            text-align: start;
+        }
+       
+        td{
+            text-align: end;
+        }
+    }
+}
+.inline-flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+} 
+
+:host{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}

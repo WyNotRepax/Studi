@@ -1,0 +1,54 @@
+{
+    "definitions":{
+        "object-data-item":{
+            "metadata":{
+                "description": "The Data of an Object to be placed"
+            },
+            "properties": {
+                "description": {
+                    "metadata": {
+                        "description": "The Description of the Object to be placed"
+                    },
+                    "type": "string"
+                },
+                "lat": {
+                    "type": "float64",
+                    "metadata": {
+                        "description": "The latitude of the object to be placed"
+                    }
+                },
+                "lng": {
+                    "type": "float64",
+                    "metadata": {
+                        "description": "The longitude of the object to be placed"
+                    }
+                },
+                "alt": {
+                    "type": "float64",
+                    "metadata": {
+                        "description": "The altitude of the object to be placed"
+                    }
+                },
+                "type": {
+                    "metadata": {
+                        "description": "The Type of the Object to be placed",
+                        "enumDescription": {
+                            "earth-station": "The object should be displayed as an earth station",
+                            "earth-satellite":"The object should be displayed as an earth satellite",
+                            "geo-satellite":"The object should be displayed as a geostationary satellite"
+                        }
+                    },
+                    "enum": [
+                        "earth-station",
+                        "earth-satellite",
+                        "geo-satellite"
+                    ]
+                }
+            }
+        }
+    },
+    "metadata":{
+        "description": "The Data of all Objects to be placed"
+    },
+    "elements":{"ref":"object-data-item"}
+}

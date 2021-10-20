@@ -1,0 +1,24 @@
+[
+    {
+        "adresse": {
+            "hausnummer": "Dies",
+            "ort": "ist",
+            "plz": "die",
+            "strasse": "Adresse1"
+        },
+        "kundennummer": 0,
+        "nachname": "Vorname1",
+        "vorname": "Nachname1"
+    },
+    {
+        "adresse": {
+            "hausnummer": "Dies",
+            "ort": "ist",
+            "plz": "die",
+            "strasse": "Adresse2"
+        },
+        "kundennummer": 1,
+        "nachname": "Vorname2",
+        "vorname": "Nachname2"
+    }
+]

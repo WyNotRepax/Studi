@@ -1,0 +1,958 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>three-d-vis-app documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">three-d-vis-app documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li>ApiService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/service/api/api.service.ts</code>
+        </p>
+
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Service to load data from the api-interface</p>
+
+            </p>
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Static</span>
+                                    <span class="modifier">Readonly</span>
+                                <a href="#BASE_URL">BASE_URL</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Static</span>
+                                <a href="#MAPOVERLAYDATA_ENDPOINT">MAPOVERLAYDATA_ENDPOINT</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Static</span>
+                                <a href="#SATELLITE_ENDPOINT">SATELLITE_ENDPOINT</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Static</span>
+                                <a href="#TERMINAL_ENDPOINT">TERMINAL_ENDPOINT</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Static</span>
+                                <a href="#TERMINALLIVEDATA_ENDPOINT">TERMINALLIVEDATA_ENDPOINT</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Static</span>
+                                    <span class="modifier">Readonly</span>
+                                <a href="#VERSION">VERSION</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getMapOverlayData">getMapOverlayData</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getMapOverlayGeodata">getMapOverlayGeodata</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getSatellites">getSatellites</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getTerminalLiveData">getTerminalLiveData</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getTerminals">getTerminals</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(http: <a href="https://angular.io/api/common/http/HttpClient" target="_blank">HttpClient</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/service/api/api.service.ts:38</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Constructor injects Http client</p>
+</div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>http</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/common/http/HttpClient" target="_blank" >HttpClient</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <code><ul>
+<li>injected http client</li>
+</ul>
+</code>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getMapOverlayData"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            getMapOverlayData
+                        </b>
+                        <a href="#getMapOverlayData"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getMapOverlayData()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="112"
+                            class="link-to-prism">src/app/service/api/api.service.ts:112</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Loads data for mapoverlays from the api-interface via HttpClient</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/ApiResponse.html" target="_self" >Promise&lt;ApiResponse&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <ul>
+<li>rejected or resolved promise with the apiResponse</li>
+</ul>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getMapOverlayGeodata"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            getMapOverlayGeodata
+                        </b>
+                        <a href="#getMapOverlayGeodata"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getMapOverlayGeodata(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="133"
+                            class="link-to-prism">src/app/service/api/api.service.ts:133</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Loads geo-data for mapoverlays from the api-interface via HttpClient</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/ApiResponse.html" target="_self" >Promise&lt;ApiResponse&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <ul>
+<li>rejected or resolved promise with the apiResponse</li>
+</ul>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getSatellites"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            getSatellites
+                        </b>
+                        <a href="#getSatellites"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getSatellites()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="52"
+                            class="link-to-prism">src/app/service/api/api.service.ts:52</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Loads data for satellite objects from the api-interface via HttpClient</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/ApiResponse.html" target="_self" >Promise&lt;ApiResponse&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <ul>
+<li>rejected or resolved promise with the apiResponse</li>
+</ul>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getTerminalLiveData"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            getTerminalLiveData
+                        </b>
+                        <a href="#getTerminalLiveData"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getTerminalLiveData()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="92"
+                            class="link-to-prism">src/app/service/api/api.service.ts:92</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Loads terminal-live-data from the api-interface via HttpClient</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/ApiResponse.html" target="_self" >Promise&lt;ApiResponse&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <ul>
+<li>rejected or resolved promise with the apiResponse</li>
+</ul>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getTerminals"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            getTerminals
+                        </b>
+                        <a href="#getTerminals"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getTerminals()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="72"
+                            class="link-to-prism">src/app/service/api/api.service.ts:72</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Loads data for terminal objects from the api-interface via HttpClient</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/ApiResponse.html" target="_self" >Promise&lt;ApiResponse&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <ul>
+<li>rejected or resolved promise with the apiResponse</li>
+</ul>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+            <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="BASE_URL"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Static</span>
+                                <span class="modifier">Readonly</span>
+                            BASE_URL</b>
+                            <a href="#BASE_URL"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&quot;&quot;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/service/api/api.service.ts:18</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Base URL of the API</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="MAPOVERLAYDATA_ENDPOINT"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Static</span>
+                            MAPOVERLAYDATA_ENDPOINT</b>
+                            <a href="#MAPOVERLAYDATA_ENDPOINT"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&quot;obj/MapOverlay&quot;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/service/api/api.service.ts:38</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>API endpoint for the map ovelays</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="SATELLITE_ENDPOINT"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Static</span>
+                            SATELLITE_ENDPOINT</b>
+                            <a href="#SATELLITE_ENDPOINT"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&quot;obj/ScSatellite&quot;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/service/api/api.service.ts:26</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>API endpoint for satellites</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="TERMINAL_ENDPOINT"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Static</span>
+                            TERMINAL_ENDPOINT</b>
+                            <a href="#TERMINAL_ENDPOINT"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&quot;obj/Terminal&quot;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/service/api/api.service.ts:30</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>API endpoint for terminals</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="TERMINALLIVEDATA_ENDPOINT"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Static</span>
+                            TERMINALLIVEDATA_ENDPOINT</b>
+                            <a href="#TERMINALLIVEDATA_ENDPOINT"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&quot;obj/TerminalLiveData&quot;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/service/api/api.service.ts:34</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>API endpoint for terminal live data</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="VERSION"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Static</span>
+                                <span class="modifier">Readonly</span>
+                            VERSION</b>
+                            <a href="#VERSION"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&quot;v1&quot;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/service/api/api.service.ts:22</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>API version number</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { HttpClient } from &quot;@angular/common/http&quot;;
+import { Injectable } from &quot;@angular/core&quot;;
+import { ApiResponse } from &quot;src/app/entity/data/api-response.class&quot;;
+import { GeoDataProvider } from &quot;src/app/entity/data/geo-data-provider.interface&quot;;
+import { MapOverlay } from &quot;src/app/entity/data/map-overlay.class&quot;;
+
+/**
+ * Service to load data from the api-interface
+ */
+@Injectable({
+  providedIn: &quot;root&quot;
+})
+export class ApiService implements GeoDataProvider {
+
+  /**
+   * Base URL of the API
+   */
+  public static readonly BASE_URL &#x3D; &quot;&quot;;//&quot;/satconnect_demo_develop_backend&quot;;
+  /**
+   * API version number
+   */
+  public static readonly VERSION &#x3D; &quot;v1&quot;;
+  /**
+   * API endpoint for satellites
+   */
+  public static SATELLITE_ENDPOINT &#x3D; &quot;obj/ScSatellite&quot;;
+  /**
+   * API endpoint for terminals
+   */
+  public static TERMINAL_ENDPOINT &#x3D; &quot;obj/Terminal&quot;;
+  /**
+   * API endpoint for terminal live data
+   */
+  public static TERMINALLIVEDATA_ENDPOINT &#x3D; &quot;obj/TerminalLiveData&quot;;
+  /**
+   * API endpoint for the map ovelays
+   */
+  public static MAPOVERLAYDATA_ENDPOINT &#x3D; &quot;obj/MapOverlay&quot;
+
+  /**
+   * Constructor injects Http client
+   * 
+   * @param http - injected http client
+   */
+  constructor(private http: HttpClient) {}
+
+  /**
+   * Loads data for satellite objects from the api-interface via HttpClient
+   * 
+   * @returns - rejected or resolved promise with the apiResponse
+   */
+  async getSatellites(): Promise&lt;ApiResponse&gt; {
+    return new Promise&lt;ApiResponse&gt;((resolve, reject) &#x3D;&gt; {
+      this.http.get(&#x60;${ApiService.BASE_URL}/api/${ApiService.VERSION}/${ApiService.SATELLITE_ENDPOINT}&#x60;).toPromise()
+        .then(object &#x3D;&gt; {
+          let apiResponse &#x3D; new ApiResponse(object);
+          if (apiResponse.meta.listing &#x3D;&#x3D; false) {
+            reject();
+          } else {
+            resolve(apiResponse);
+          }
+        })
+        .catch(reason &#x3D;&gt; reject(reason ?? &quot;Unknown reason&quot;));
+    });
+  }
+
+  /**
+   * Loads data for terminal objects from the api-interface via HttpClient
+   * 
+   * @returns - rejected or resolved promise with the apiResponse
+   */
+  async getTerminals(): Promise&lt;ApiResponse&gt; {
+    return new Promise&lt;ApiResponse&gt;((resolve, reject) &#x3D;&gt; {
+      this.http.get(&#x60;${ApiService.BASE_URL}/api/${ApiService.VERSION}/${ApiService.TERMINAL_ENDPOINT}&#x60;).toPromise()
+        .then(object &#x3D;&gt; {
+          let apiResponse &#x3D; new ApiResponse(object);
+          if (apiResponse.meta.listing &#x3D;&#x3D; false) {
+            reject();
+          } else {
+            resolve(apiResponse);
+          }
+        })
+        .catch(reason &#x3D;&gt; reject(reason ?? &quot;Unknown reason&quot;));
+    });
+  }
+
+  /**
+   * Loads terminal-live-data from the api-interface via HttpClient
+   * 
+   * @returns - rejected or resolved promise with the apiResponse
+   */
+  async getTerminalLiveData(): Promise&lt;ApiResponse&gt; {
+    return new Promise&lt;ApiResponse&gt;((resolve, reject) &#x3D;&gt; {
+      this.http.get(&#x60;${ApiService.BASE_URL}/api/${ApiService.VERSION}/${ApiService.TERMINALLIVEDATA_ENDPOINT}&#x60;).toPromise()
+        .then(object &#x3D;&gt; {
+          let apiResponse &#x3D; new ApiResponse(object);
+          if (apiResponse.meta.listing &#x3D;&#x3D; false) {
+            reject();
+          } else {
+            resolve(apiResponse);
+          }
+        })
+        .catch(reason &#x3D;&gt; reject(reason ?? &quot;Unknown reason&quot;));
+    });
+  }
+
+  /**
+   * Loads data for mapoverlays from the api-interface via HttpClient
+   * 
+   * @returns - rejected or resolved promise with the apiResponse
+   */
+  async getMapOverlayData(): Promise&lt;ApiResponse&gt; {
+    return new Promise&lt;ApiResponse&gt;((resolve, reject) &#x3D;&gt; {
+      this.http.get(&#x60;${ApiService.BASE_URL}/api/${ApiService.VERSION}/${ApiService.MAPOVERLAYDATA_ENDPOINT}&#x60;).toPromise()
+        .then(object &#x3D;&gt; {
+          let apiResponse &#x3D; new ApiResponse(object);
+          if (apiResponse.meta.listing &#x3D;&#x3D; false) {
+            reject();
+          } else {
+            (apiResponse.data as MapOverlay[]).forEach(mapOverlay &#x3D;&gt; mapOverlay.setLoader(this));
+            resolve(apiResponse);
+          }
+        })
+        .catch(reason &#x3D;&gt; reject(reason ?? &quot;Unknown reason&quot;));
+    });
+  }
+
+  /**
+   * Loads geo-data for mapoverlays from the api-interface via HttpClient
+   * 
+   * @returns - rejected or resolved promise with the apiResponse
+   */
+  async getMapOverlayGeodata(id: number): Promise&lt;ApiResponse&gt; {
+    return new Promise&lt;ApiResponse&gt;((resolve, reject) &#x3D;&gt; {
+      this.http.get(&#x60;${ApiService.BASE_URL}/api/${ApiService.VERSION}/${ApiService.MAPOVERLAYDATA_ENDPOINT}/${id}/geodata&#x60;).toPromise()
+        .then(object &#x3D;&gt; {
+          let apiResponse &#x3D; new ApiResponse(object, true);
+          if (apiResponse.meta.listing &#x3D;&#x3D;&#x3D; true) {
+            reject();
+          } else {
+            resolve(apiResponse);
+          }
+        })
+        .catch(reason &#x3D;&gt; reject(reason ?? &quot;Unknown reason&quot;));
+    });
+  }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'ApiService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

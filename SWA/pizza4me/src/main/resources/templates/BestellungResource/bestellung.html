@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="./{bestellung.id}/">
+    <title>Bestellung {bestellung.id}</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Pizza</th>
+                    <th>Menge</th>
+                    <th>Einzelpreis</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    {#for bestellposten in bestellung.getBestellposten()}
+                    <td><a href="/pizza/{bestellposten.getPizza().id}">{bestellposten.getPizza().getName()}</a></td>
+                    <td>
+                        <form action="./bestellposten/{bestellposten.id}" method="POST" id="form_{bestellposten.id}">
+                            <input type="number" value="{bestellposten.getMenge()}" name="menge">
+                        </form>
+                    </td>    
+                    <td>{bestellposten.getPizza().getEinzelpreis()}</td>
+                    <td><input type="submit" value="Ändern" form="form_{bestellposten.id}"></td>
+                    {/for}
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>
+                        <form action="./bestellposten" method="POST" id="form_new">
+                            <input type="number" name="pizzaid">
+                        </form>
+                    </td>
+                    <td><input type="number" name="menge" form="form_new"></td>
+                    <td></td>
+                    <td><input type="submit" value="Hinzufügen" form="form_new"></td>
+                </tr>
+            </tfoot>
+        </table>
+        <a href="/pizza" target="_blank">Katalog</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="./{kunde.id}/">
+    <title>Kunde {kunde.id}</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <form action="./adresse" method="POST">
+            <label for="strasse">Strasse</label><input id="strasse" name="strasse" type="text" value="{kunde.getAdresse().getStrasse() ?: ''}">
+            <label for="hausnummer">Hausnummer</label><input id="hausnummer" name="hausnummer" type="text" value="{kunde.getAdresse().getHausnummer() ?: ''}">
+            <label for="plz">Plz</label><input id="plz" name="plz" type="text" value="{kunde.getAdresse().getPlz() ?: ''}">
+            <label for="ort">Ort</label><input id="ort" name="ort" type="text" value="{kunde.getAdresse().getOrt() ?: ''}">
+            {#if kunde.getAdresse() == null}
+            <input type="hidden" name="create" value="true">
+            {#else}
+            <input type="hidden" name="create" value="false">
+            {/if}
+            <input type="submit" value="Submit">
+        </form>
+
+        <table class="table">
+            <thead>
+                <th>Bestellnummer</th>
+                <th>Bestellposten</th>
+            </thead>
+            <tbody>
+                {#for bestellung in kunde.getBestellungen()}
+                <tr>
+                    <td><a href="./bestellungen/{bestellung.id}">{bestellung.id}</a></td>
+                    <td>{bestellung.getBestellposten().size() ?: 0}</td>
+                </tr>
+                {/for}
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>
+                        <form action="./bestellungen" method="POST">
+                            <input type="submit" value="Neue Bestellung">
+                        </form>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</body>
+</html>

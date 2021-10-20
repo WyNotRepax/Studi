@@ -1,0 +1,39 @@
+<table class="table table-striped">
+    <thead class="thead-light">
+        <tr>
+            <th scope="col">ISBN</th>
+            <th scope="col">Titel</th>
+            <th scope="col">Autor</th>
+            <th scope="col">Erscheinungsjahr</th>
+            <th scope="col">Seiten</th>
+            <th scope="col">Verlag</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody id="bookTableBody">
+        <tr *ngFor="let book of filter.length === 0 ? bookService.getBooks() : bookService.getBooksByAuthor(filter)">
+            <td>{{book.isbn}}</td>
+            <td>{{book.titel}}</td>
+            <td>{{book.author}}</td>
+            <td>{{book.year}}</td>
+            <td>{{book.pages}}</td>
+            <td>{{book.publisher}}</td>
+            <td><input type="button" value="Remove" class="btn btn-danger" (click)="bookService.removeBook(book)" />
+            </td>
+        </tr>
+
+    </tbody>
+    <tfoot>
+        <tr>
+            <td><input #isbnInput type="number" class="clear"></td>
+            <td><input #titleInput type="text" class="clear"></td>
+            <td><input #authorInput type="text" class="clear"></td>
+            <td><input #yearInput type="number" class="clear"></td>
+            <td><input #pageInput type="number" class="clear"></td>
+            <td><input #publisherInput type="text" class="clear"></td>
+            <td><input type="button" class="btn btn-primary" value="Add"
+                    (click)="onAddClick(isbnInput.value,titleInput.value,authorInput.value,yearInput.value,pageInput.value,publisherInput.value)" />
+            </td>
+        </tr>
+    </tfoot>
+</table>

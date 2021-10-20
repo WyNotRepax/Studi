@@ -1,0 +1,784 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>three-d-vis-app documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">three-d-vis-app documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>HoverComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/component/hover/hover.component.ts</code>
+</p>
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Component to display basic information of an 3D-object on hover</p>
+
+    </p>
+
+
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-hover</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./hover.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./hover.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#satelliteData">satelliteData</a>
+                            </li>
+                            <li>
+                                <a href="#terminalData">terminalData</a>
+                            </li>
+                            <li>
+                                <a href="#terminalLiveData">terminalLiveData</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#uiService">uiService</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#calcPos">calcPos</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(uiService: <a href="../injectables/UiService.html">UiService</a>, dataService: <a href="../injectables/DataService.html">DataService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">src/app/component/hover/hover.component.ts:47</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Constructor initializing satellite, terminal and terminalLiveDate observables</p>
+</div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>uiService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/UiService.html" target="_self" >UiService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <code><ul>
+<li>the UI-Service</li>
+</ul>
+</code>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>dataService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/DataService.html" target="_self" >DataService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <code><ul>
+<li>the Data-Service</li>
+</ul>
+</code>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="calcPos"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            calcPos
+                        </b>
+                        <a href="#calcPos"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>calcPos(position: literal type | null)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="83"
+                            class="link-to-prism">src/app/component/hover/hover.component.ts:83</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Calculates the position from the hover window</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>position</td>
+                                    <td>
+                                            <code>literal type | null</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>x and y position</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>literal type</code>
+
+                    </div>
+                    <div class="io-description">
+                        <ul>
+<li>left and top position from the hover window</li>
+</ul>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="satelliteData"></a>
+                        <span class="name">
+                            <b>
+                            satelliteData</b>
+                            <a href="#satelliteData"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/Satellite.html" target="_self" >Observable&lt;Satellite | null&gt;</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">src/app/component/hover/hover.component.ts:39</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Observable for satellite data</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="terminalData"></a>
+                        <span class="name">
+                            <b>
+                            terminalData</b>
+                            <a href="#terminalData"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/Terminal.html" target="_self" >Observable&lt;Terminal | null&gt;</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/app/component/hover/hover.component.ts:43</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Observable for terminal data</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="terminalLiveData"></a>
+                        <span class="name">
+                            <b>
+                            terminalLiveData</b>
+                            <a href="#terminalLiveData"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Observable&lt;TerminalLiveData | null&gt;</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">src/app/component/hover/hover.component.ts:47</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Observable for terminal live data</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="uiService"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            uiService</b>
+                            <a href="#uiService"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../injectables/UiService.html" target="_self" >UiService</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">src/app/component/hover/hover.component.ts:55</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description">- the UI-Service</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &quot;@angular/core&quot;;
+import { trigger, state, style, animate, transition } from &quot;@angular/animations&quot;;
+import { UiService } from &quot;@service/ui/ui.service&quot;;
+import { DataService } from &quot;@service/data/data.service&quot;;
+import { Observable } from &quot;rxjs&quot;;
+import { map, withLatestFrom } from &quot;rxjs/operators&quot;;
+import { ApiObjectType } from &quot;src/app/entity/data/api-object-type.enum&quot;;
+import { Satellite } from &quot;src/app/entity/data/satellite.class&quot;;
+import { TerminalLiveData } from &quot;src/app/entity/data/terminal-live-data.class&quot;;
+import { Terminal } from &quot;src/app/entity/data/terminal.class&quot;;
+
+
+/**
+ * Component to display basic information of an 3D-object on hover
+ */
+@Component({
+  selector: &quot;app-hover&quot;,
+  animations: [
+    trigger(&quot;state&quot;, [
+      state(&quot;visible&quot;, style({
+        opacity: &quot;1&quot;
+      })),
+      state(&quot;hidden&quot;, style({
+        opacity: &quot;0&quot;
+      })),
+      transition(&quot;* &#x3D;&gt; visible&quot;, [
+        animate(&quot;0.1s 100ms ease-in&quot;)
+      ])
+    ])
+  ],
+  templateUrl: &quot;./hover.component.html&quot;,
+  styleUrls: [&quot;./hover.component.scss&quot;],
+})
+export class HoverComponent {
+
+  /**
+   * Observable for satellite data
+   */
+  satelliteData: Observable&lt;Satellite | null&gt;;
+  /**
+   * Observable for terminal data
+   */
+  terminalData: Observable&lt;Terminal | null&gt;;
+  /**
+  * Observable for terminal live data
+  */
+  terminalLiveData: Observable&lt;TerminalLiveData | null&gt;;
+
+  /**
+   * Constructor initializing satellite, terminal and terminalLiveDate observables
+   * 
+   * @param uiService - the UI-Service
+   * @param dataService - the Data-Service
+   */
+  constructor(public uiService: UiService, private dataService: DataService) {
+
+    this.satelliteData &#x3D; this.uiService.hoveredObjectId.pipe(
+      map(uid &#x3D;&gt; uid?.type &#x3D;&#x3D;&#x3D; ApiObjectType.Satellite ? uid : null),
+      withLatestFrom(this.dataService.satellites),
+      map(([uid, satellites]) &#x3D;&gt; satellites.filter(satellite &#x3D;&gt; uid?.equals(satellite.getUid()))[0] ?? null)
+    );
+
+    this.terminalData &#x3D; this.uiService.hoveredObjectId.pipe(
+      map(uid &#x3D;&gt; uid?.type &#x3D;&#x3D;&#x3D; ApiObjectType.TerminalLiveData ? uid : null),
+      withLatestFrom(this.dataService.terminals),
+      map(([uid, terminals]) &#x3D;&gt; terminals.filter(terminal &#x3D;&gt; uid?.id &#x3D;&#x3D;&#x3D; terminal.id)[0] ?? null),
+    );
+
+    this.terminalLiveData &#x3D; this.uiService.hoveredObjectId.pipe(
+      map(uid &#x3D;&gt; uid?.type &#x3D;&#x3D;&#x3D; ApiObjectType.TerminalLiveData ? uid : null),
+      withLatestFrom(this.dataService.terminalLiveData),
+      map(([uid, terminals]) &#x3D;&gt; terminals.filter(terminal &#x3D;&gt; uid?.id &#x3D;&#x3D;&#x3D; terminal.id)[0] ?? null),
+    );
+    
+  }
+
+  /**
+   * Calculates the position from the hover window
+   * 
+   * @param position - x and y position
+   * @returns - left and top position from the hover window
+   */
+   public calcPos(position: { x: number, y: number } | null):{} {
+    if (position &#x3D;&#x3D;&#x3D; null) {
+      return {};
+    }
+    return { &quot;left.px&quot;: position.x, &quot;top.px&quot;: position.y };
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div #refEl id&#x3D;&quot;tooltip&quot; [@state]&#x3D;&quot;(uiService.hoveredObjectId | async) !&#x3D; null ? &#x27;visible&#x27; : &#x27;hidden&#x27;&quot; [ngStyle]&#x3D;&quot;calcPos(uiService.hoverPosition | async)&quot;&gt;
+    &lt;div class&#x3D;&quot;header-container&quot;&gt;
+        &lt;h2 id&#x3D;&quot;objName&quot; *ngIf&#x3D;&quot;satelliteData | async as satellite&quot;&gt;{{satellite.name}}&lt;/h2&gt;
+        &lt;h2 id&#x3D;&quot;objName&quot; *ngIf&#x3D;&quot;terminalData | async as terminal&quot;&gt;{{terminal.name}}&lt;/h2&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;content-conainer&quot;&gt;
+        &lt;table&gt;
+            &lt;tr *ngIf&#x3D;&quot;terminalData | async as terminal&quot;&gt;
+                &lt;th&gt;Id&lt;/th&gt;
+                &lt;td&gt;{{terminal.id}}&lt;/td&gt;
+            &lt;/tr&gt;
+
+            &lt;tr *ngIf&#x3D;&quot;satelliteData | async as satellite&quot;&gt;
+                &lt;th&gt;Id&lt;/th&gt;
+                &lt;td&gt;{{satellite.id}}&lt;/td&gt;
+            &lt;/tr&gt;
+
+            &lt;tr *ngIf&#x3D;&quot;terminalData | async as terminal&quot;&gt;
+                &lt;th&gt;Mobility Type&lt;/th&gt;
+                &lt;td&gt;{{terminal.mobilityType}}&lt;/td&gt;
+            &lt;/tr&gt;
+
+            &lt;tr *ngIf&#x3D;&quot;terminalLiveData | async as terminalLiveData&quot;&gt;
+                &lt;th&gt;Längengrad&lt;/th&gt;
+                &lt;td&gt;{{terminalLiveData.longitude}}&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr *ngIf&#x3D;&quot;satelliteData | async as satellite&quot;&gt;
+                &lt;th&gt;Längengrad&lt;/th&gt;
+                &lt;td&gt;{{satellite.longitude}}&lt;/td&gt;
+            &lt;/tr&gt;
+
+            &lt;tr *ngIf&#x3D;&quot;terminalLiveData | async as terminalLiveData&quot;&gt;
+                &lt;th&gt;Breitengrad&lt;/th&gt;
+                &lt;td&gt;{{terminalLiveData.latitude}}&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./hover.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">#tooltip{
+    position: absolute;
+    height: auto;
+    width: auto;
+    min-width: 250px;
+    background-color: rgba($color: #212121, $alpha: 0.9);
+    padding: 5px 15px 5px 15px;
+    flex-direction: row;
+    font-family: &quot;Poppins&quot;, sans-serif;
+    border-radius: 10px;
+    color: #d6dbdd;
+    opacity: 2;
+    box-shadow: 2px 2px 10px -5px rgba($color: #d6dbdd, $alpha: 0.8);
+
+    .header-container{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 10px;
+        margin-left: 5px;
+
+        #objName{
+            margin: 0;
+        }
+
+        #objType{
+            letter-spacing: 0.04rem;
+        }
+    }
+
+    .content-conainer{
+        margin-bottom: 10px;
+        margin-left: 5px;
+        color: #d3e0e7;
+       
+        table{
+            width: 100%;
+        }
+
+        th{
+            font-weight: lighter;
+            text-align: start;
+        }
+       
+        td{
+            text-align: end;
+        }
+    }
+}
+.inline-flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+} 
+
+:host{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div #refEl id="tooltip" [@state]="(uiService.hoveredObjectId | async) != null ? \'visible\' : \'hidden\'" [ngStyle]="calcPos(uiService.hoverPosition | async)">    <div class="header-container">        <h2 id="objName" *ngIf="satelliteData | async as satellite">{{satellite.name}}</h2>        <h2 id="objName" *ngIf="terminalData | async as terminal">{{terminal.name}}</h2>    </div>    <div class="content-conainer">        <table>            <tr *ngIf="terminalData | async as terminal">                <th>Id</th>                <td>{{terminal.id}}</td>            </tr>            <tr *ngIf="satelliteData | async as satellite">                <th>Id</th>                <td>{{satellite.id}}</td>            </tr>            <tr *ngIf="terminalData | async as terminal">                <th>Mobility Type</th>                <td>{{terminal.mobilityType}}</td>            </tr>            <tr *ngIf="terminalLiveData | async as terminalLiveData">                <th>Längengrad</th>                <td>{{terminalLiveData.longitude}}</td>            </tr>            <tr *ngIf="satelliteData | async as satellite">                <th>Längengrad</th>                <td>{{satellite.longitude}}</td>            </tr>            <tr *ngIf="terminalLiveData | async as terminalLiveData">                <th>Breitengrad</th>                <td>{{terminalLiveData.latitude}}</td>            </tr>        </table>    </div></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'DetailComponent', 'selector': 'app-detail'},{'name': 'HoverComponent', 'selector': 'app-hover'},{'name': 'MenuComponent', 'selector': 'app-menu'},{'name': 'Visualizer3dComponent', 'selector': 'app-visualizer3d'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'HoverComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'HoverComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

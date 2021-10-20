@@ -1,0 +1,12 @@
+[
+    {
+        "kundennummer": 0,
+        "nachname": "Vorname1",
+        "vorname": "Nachname1"
+    },
+    {
+        "kundennummer": 1,
+        "nachname": "Vorname2",
+        "vorname": "Nachname2"
+    }
+]

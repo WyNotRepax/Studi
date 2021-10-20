@@ -1,0 +1,183 @@
+{
+    "meta": {
+        "listing": true,
+        "count": 2,
+        "countTotal": 2,
+        "start": 0,
+        "pageSize": 20,
+        "page": 1,
+        "sort": [],
+        "status": 200
+    },
+    "data": [
+        {
+            "ID": 4,
+            "currentBeam": null,
+            "TerminalExternalSubscriptionID": 4,
+            "TerminalSubscriptionID": null,
+            "rawOpState": null,
+            "rawOPStateDate": null,
+            "opState": "online",
+            "opStateExtended": "Status calculated after skipping ICMP",
+            "lastCalcOpState": "2021-06-15 14:08:17",
+            "aggregatedStatus": "online",
+            "throttled": false,
+            "lastCalcAggregatedStatus": "2021-06-15 14:08:18",
+            "icmpStatus": false,
+            "lastICMPStatusCheck": null,
+            "longitude": "-0.94577000",
+            "latitude": "-43.73998000",
+            "lastCalcLatLong": "2021-06-15 14:08:18",
+            "externalActive": true,
+            "externalProvisioned": true,
+            "billingInProgress": false,
+            "allocatedIps": {
+                "ipdata": [
+                    {
+                        "ip": "10.121.1.2",
+                        "gateway": null,
+                        "subnet": "255.255.255.248",
+                        "identifier": {
+                            "id": "3:1",
+                            "name": "Admin SVN",
+                            "_version": 1,
+                            "_dtoClassName": "GSITS\\Module\\ScTerminalManager\\Dtos\\IpDataEntryIdentifierDto"
+                        },
+                        "interface": "Eth0",
+                        "_version": 1,
+                        "_dtoClassName": "GSITS\\Module\\ScTerminalManager\\Dtos\\IpDataEntryDto"
+                    },
+                    {
+                        "ip": "10.122.1.2",
+                        "gateway": null,
+                        "subnet": "255.255.255.248",
+                        "identifier": {
+                            "id": "3:1",
+                            "name": "Admin SVN",
+                            "_version": 1,
+                            "_dtoClassName": "GSITS\\Module\\ScTerminalManager\\Dtos\\IpDataEntryIdentifierDto"
+                        },
+                        "interface": "Sat0",
+                        "_version": 1,
+                        "_dtoClassName": "GSITS\\Module\\ScTerminalManager\\Dtos\\IpDataEntryDto"
+                    },
+                    {
+                        "ip": "10.121.3.2",
+                        "gateway": null,
+                        "subnet": "255.255.255.248",
+                        "identifier": {
+                            "id": "3:2",
+                            "name": "RM Test SVN L3 2",
+                            "_version": 1,
+                            "_dtoClassName": "GSITS\\Module\\ScTerminalManager\\Dtos\\IpDataEntryIdentifierDto"
+                        },
+                        "interface": "Eth0",
+                        "_version": 1,
+                        "_dtoClassName": "GSITS\\Module\\ScTerminalManager\\Dtos\\IpDataEntryDto"
+                    },
+                    {
+                        "ip": "10.121.4.2",
+                        "gateway": null,
+                        "subnet": "255.255.255.248",
+                        "identifier": {
+                            "id": "3:2",
+                            "name": "RM Test SVN L3 2",
+                            "_version": 1,
+                            "_dtoClassName": "GSITS\\Module\\ScTerminalManager\\Dtos\\IpDataEntryIdentifierDto"
+                        },
+                        "interface": "Sat0",
+                        "_version": 1,
+                        "_dtoClassName": "GSITS\\Module\\ScTerminalManager\\Dtos\\IpDataEntryDto"
+                    }
+                ],
+                "_version": 1,
+                "_dtoClassName": "GSITS\\Module\\ScTerminalManager\\Dtos\\AllocatedIps"
+            },
+            "_fk_allocatedIps": [],
+            "_displayName": "4",
+            "_pk": {
+                "ID": 4
+            },
+            "_type": "TerminalLiveData",
+            "_fk_ID": "1-e8350-28456-GS",
+            "_fk_currentBeam": null,
+            "_fk_TerminalExternalSubscriptionID": "4",
+            "_fk_TerminalSubscriptionID": null,
+            "_enum_rawOpState": null,
+            "_enum_opState": "Online",
+            "_enum_aggregatedStatus": "Online",
+            "_orgRestricted": false
+        },
+        {
+            "ID": 14,
+            "currentBeam": null,
+            "TerminalExternalSubscriptionID": 11,
+            "TerminalSubscriptionID": null,
+            "rawOpState": null,
+            "rawOPStateDate": null,
+            "opState": "online",
+            "opStateExtended": "Status calculated after skipping ICMP",
+            "lastCalcOpState": "2021-06-15 14:08:19",
+            "aggregatedStatus": "online",
+            "throttled": false,
+            "lastCalcAggregatedStatus": "2021-06-15 14:08:19",
+            "icmpStatus": false,
+            "lastICMPStatusCheck": null,
+            "longitude": "0.00000000",
+            "latitude": "0.00000000",
+            "lastCalcLatLong": "2021-06-15 14:08:19",
+            "externalActive": true,
+            "externalProvisioned": true,
+            "billingInProgress": false,
+            "allocatedIps": {
+                "ipdata": [
+                    {
+                        "ip": "192.64.123.1",
+                        "gateway": null,
+                        "subnet": "255.255.255.0",
+                        "identifier": {
+                            "id": "3:1",
+                            "name": "Admin SVN",
+                            "_version": 1,
+                            "_dtoClassName": "GSITS\\Module\\ScTerminalManager\\Dtos\\IpDataEntryIdentifierDto"
+                        },
+                        "interface": "Eth0",
+                        "_version": 1,
+                        "_dtoClassName": "GSITS\\Module\\ScTerminalManager\\Dtos\\IpDataEntryDto"
+                    },
+                    {
+                        "ip": "10.35.23.1",
+                        "gateway": null,
+                        "subnet": "255.255.255.252",
+                        "identifier": {
+                            "id": "3:1",
+                            "name": "Admin SVN",
+                            "_version": 1,
+                            "_dtoClassName": "GSITS\\Module\\ScTerminalManager\\Dtos\\IpDataEntryIdentifierDto"
+                        },
+                        "interface": "Sat0",
+                        "_version": 1,
+                        "_dtoClassName": "GSITS\\Module\\ScTerminalManager\\Dtos\\IpDataEntryDto"
+                    }
+                ],
+                "_version": 1,
+                "_dtoClassName": "GSITS\\Module\\ScTerminalManager\\Dtos\\AllocatedIps"
+            },
+            "_fk_allocatedIps": [],
+            "_displayName": "14",
+            "_pk": {
+                "ID": 14
+            },
+            "_type": "TerminalLiveData",
+            "_fk_ID": "1-X7-2572-GS",
+            "_fk_currentBeam": null,
+            "_fk_TerminalExternalSubscriptionID": "11",
+            "_fk_TerminalSubscriptionID": null,
+            "_enum_rawOpState": null,
+            "_enum_opState": "Online",
+            "_enum_aggregatedStatus": "Online",
+            "_orgRestricted": false
+        }
+    ],
+    "errors": []
+}

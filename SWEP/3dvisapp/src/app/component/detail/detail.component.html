@@ -1,0 +1,28 @@
+<div>
+    <button class="close-btn" mat-button (click)="close()"><mat-icon>close</mat-icon></button>
+    
+    <h2 id="objName" *ngIf="satelliteData | async as satellite">{{satellite.name}}</h2>
+    <h2 id="objName" *ngIf="terminalData | async as terminal">{{terminal.name}}</h2> 
+    <mat-list>
+        
+        <mat-list-item *ngIf="terminalData | async as terminal">
+                Id: {{terminal.id}}  
+        </mat-list-item>
+        <mat-list-item *ngIf="satelliteData | async as satellite">
+            Id: {{satellite.id}}
+        </mat-list-item>
+        <mat-list-item *ngIf="terminalData | async as terminal">
+            Mobility Type: {{terminal.mobilityType}}
+        </mat-list-item>
+        <mat-list-item *ngIf="terminalLiveData | async as terminalLiveData">
+            Längengrad: {{terminalLiveData.longitude}}
+        </mat-list-item>
+        <mat-list-item *ngIf="satelliteData | async as satellite">
+            Längengrad: {{satellite.longitude}}
+        </mat-list-item>
+        <mat-list-item *ngIf="terminalLiveData | async as terminalLiveData">
+            Breitengrad: {{terminalLiveData.latitude}}
+        </mat-list-item>
+        
+    </mat-list>
+</div>

@@ -1,0 +1,16 @@
+<mat-toolbar color="primary">
+    <button class="menu-btn" mat-button (click)="sidenav.toggle()"><mat-icon>menu</mat-icon></button>
+    <span class="nav-title">3DVisApp</span>
+</mat-toolbar> 
+<mat-sidenav-container [hasBackdrop]="false">
+    <mat-sidenav #sidenav mode="side" [(opened)]="opened">
+        <app-menu></app-menu>
+    </mat-sidenav>
+    <mat-sidenav position="end" [(opened)]="uiService.detailsOpen" #details mode="side">
+        <app-detail></app-detail>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <app-hover></app-hover>
+        <app-visualizer3d></app-visualizer3d>
+    </mat-sidenav-content>
+</mat-sidenav-container>

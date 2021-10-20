@@ -1,0 +1,1416 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>three-d-vis-app documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">three-d-vis-app documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li>BasicObjectService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/service/basic-object/basic-object.service.ts</code>
+        </p>
+
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Service to generate basic geometric mesh objects</p>
+
+            </p>
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#createMaterial">createMaterial</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#createMesh">createMesh</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#generateBoxObject">generateBoxObject</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#generateConeObject">generateConeObject</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#generateCylinderObject">generateCylinderObject</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#generateSphereObject">generateSphereObject</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor()</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="75" class="link-to-prism">src/app/service/basic-object/basic-object.service.ts:75</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Default constructor</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createMaterial"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            createMaterial
+                        </b>
+                        <a href="#createMaterial"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>createMaterial(matType: <a href="../undefineds/MaterialType.html">MaterialType</a>, diffMap: THREE.Texture, alphaMap?: THREE.Texture, normalMap?: THREE.Texture, specularMap?: THREE.Texture)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="182"
+                            class="link-to-prism">src/app/service/basic-object/basic-object.service.ts:182</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Creates different materials based on material type</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>matType</td>
+                                    <td>
+                                                <code><a href="../miscellaneous/enumerations.html#MaterialType" target="_self" >MaterialType</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>material type to be created</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>diffMap</td>
+                                    <td>
+                                            <code>THREE.Texture</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>diffuse map for the material</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>alphaMap</td>
+                                    <td>
+                                            <code>THREE.Texture</code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>alpha map for the material</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>normalMap</td>
+                                    <td>
+                                            <code>THREE.Texture</code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>normal map for the material</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>specularMap</td>
+                                    <td>
+                                            <code>THREE.Texture</code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>specular map for the material</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>THREE.Material</code>
+
+                    </div>
+                    <div class="io-description">
+                        <ul>
+<li>new material</li>
+</ul>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createMesh"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            createMesh
+                        </b>
+                        <a href="#createMesh"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>createMesh(geo: <a href="../classes/Geometry.html">THREE.BufferGeometry</a>, mat: THREE.Material, backSide?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="232"
+                            class="link-to-prism">src/app/service/basic-object/basic-object.service.ts:232</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Creates a mesh with a texture mapped on the front or back side</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>geo</td>
+                                    <td>
+                                                <code><a href="../classes/Geometry.html" target="_self" >THREE.BufferGeometry</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>geomety from which a mesh is to be created</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>mat</td>
+                                    <td>
+                                            <code>THREE.Material</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>texture of the mesh</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>backSide</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>texture mapped on backside of the mesh</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Geometry.html" target="_self" >THREE.Mesh&lt;THREE.BufferGeometry, THREE.Material&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <ul>
+<li>created mesh</li>
+</ul>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="generateBoxObject"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            generateBoxObject
+                        </b>
+                        <a href="#generateBoxObject"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>generateBoxObject(width: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, height: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, depth: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="124"
+                            class="link-to-prism">src/app/service/basic-object/basic-object.service.ts:124</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Creates a box mesh</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>width</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>0.3</code>
+                                    </td>
+
+                                    <td>
+                                        <ul>
+<li>width of the box</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>height</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>0.3</code>
+                                    </td>
+
+                                    <td>
+                                        <ul>
+<li>height of the box</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>depth</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>0.3</code>
+                                    </td>
+
+                                    <td>
+                                        <ul>
+<li>depth of the box</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>THREE.Mesh</code>
+
+                    </div>
+                    <div class="io-description">
+                        <ul>
+<li>mesh of the box</li>
+</ul>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="generateConeObject"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            generateConeObject
+                        </b>
+                        <a href="#generateConeObject"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>generateConeObject(rad: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, height: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, radialSeg: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="159"
+                            class="link-to-prism">src/app/service/basic-object/basic-object.service.ts:159</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Ceates a cone mesh</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>rad</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>0.3</code>
+                                    </td>
+
+                                    <td>
+                                        <ul>
+<li>radius of the cone</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>height</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>0.6</code>
+                                    </td>
+
+                                    <td>
+                                        <ul>
+<li>height of the cone</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>radialSeg</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>32</code>
+                                    </td>
+
+                                    <td>
+                                        <ul>
+<li>amount of radial segemnts of the cone</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>THREE.Mesh</code>
+
+                    </div>
+                    <div class="io-description">
+                        <ul>
+<li>mesh of the cone</li>
+</ul>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="generateCylinderObject"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            generateCylinderObject
+                        </b>
+                        <a href="#generateCylinderObject"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>generateCylinderObject(radTop: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, radBot: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, height: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, radialSeg: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="142"
+                            class="link-to-prism">src/app/service/basic-object/basic-object.service.ts:142</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Creates a cynlinder mesh</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>radTop</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>0.2</code>
+                                    </td>
+
+                                    <td>
+                                        <ul>
+<li>radius of the top of the cylinder</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>radBot</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>0.2</code>
+                                    </td>
+
+                                    <td>
+                                        <ul>
+<li>radius of the bottom of the cylinder</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>height</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>0.2</code>
+                                    </td>
+
+                                    <td>
+                                        <ul>
+<li>height of the cylinder</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>radialSeg</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>32</code>
+                                    </td>
+
+                                    <td>
+                                        <ul>
+<li>amount of radial segements of the cylinder</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>THREE.Mesh</code>
+
+                    </div>
+                    <div class="io-description">
+                        <ul>
+<li>mesh of the cylinder</li>
+</ul>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="generateSphereObject"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            generateSphereObject
+                        </b>
+                        <a href="#generateSphereObject"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>generateSphereObject(rad: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, wSeg: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, hSeg: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, diffMap: THREE.Texture, alphaMap: THREE.Texture, normalMap: THREE.Texture, specularMap: THREE.Texture, matType: <a href="../undefineds/MaterialType.html">MaterialType</a>, backSide: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="100"
+                            class="link-to-prism">src/app/service/basic-object/basic-object.service.ts:100</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Creates a sphere mesh</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>rad</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>1</code>
+                                    </td>
+
+                                    <td>
+                                        <ul>
+<li>radius of the sphere</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>wSeg</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>1</code>
+                                    </td>
+
+                                    <td>
+                                        <ul>
+<li>amount of width segments of the sphere</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>hSeg</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>1</code>
+                                    </td>
+
+                                    <td>
+                                        <ul>
+<li>amount of height segements of the sphere</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>diffMap</td>
+                                    <td>
+                                            <code>THREE.Texture</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>null</code>
+                                    </td>
+
+                                    <td>
+                                        <ul>
+<li>diffuse map of the sphere</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>alphaMap</td>
+                                    <td>
+                                            <code>THREE.Texture</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>null</code>
+                                    </td>
+
+                                    <td>
+                                        <ul>
+<li>alpha map of the sphere</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>normalMap</td>
+                                    <td>
+                                            <code>THREE.Texture</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>null</code>
+                                    </td>
+
+                                    <td>
+                                        <ul>
+<li>normal map of the sphere</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>specularMap</td>
+                                    <td>
+                                            <code>THREE.Texture</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>null</code>
+                                    </td>
+
+                                    <td>
+                                        <ul>
+<li>specular map of the sphere</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>matType</td>
+                                    <td>
+                                                <code><a href="../miscellaneous/enumerations.html#MaterialType" target="_self" >MaterialType</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>MaterialType.BASIC</code>
+                                    </td>
+
+                                    <td>
+                                        <ul>
+<li>material type to be used</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>backSide</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>false</code>
+                                    </td>
+
+                                    <td>
+                                        <ul>
+<li>texture mapped on backside of the mesh</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>THREE.Mesh</code>
+
+                    </div>
+                    <div class="io-description">
+                        <ul>
+<li>mesh of the sphere</li>
+</ul>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &quot;@angular/core&quot;;
+import * as THREE from &quot;three&quot;;
+
+/**
+ * vertex shader
+ */
+const _VS &#x3D; &#x60;
+  varying vec3 Normal;
+  varying vec3 Position;
+  varying vec2 VertexUV;
+
+  void main() {
+    VertexUV &#x3D; uv;
+    Normal &#x3D; normalize(normalMatrix * normal);
+    Position &#x3D; vec3(modelViewMatrix * vec4(position, 1.0));
+    gl_Position &#x3D; projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+  }
+&#x60;;
+
+/**
+ * fragment shader - phong shading
+ */
+const _FS &#x3D; &#x60;
+  varying vec3 Normal;
+  varying vec3 Position;
+  varying vec2 VertexUV;
+
+  uniform sampler2D DetailTex;
+  uniform sampler2D BackgroundTex;
+  uniform vec2 Center;
+  uniform float Scale;
+  uniform vec3 LightPosition;
+  uniform vec3 LightIntensity;
+  uniform float Shininess;
+  uniform float AmbientIntensity;
+  uniform vec3 SpecColor;
+
+  vec3 phong() {
+    vec2 relPos &#x3D; (VertexUV - Center);
+    if(relPos.x &gt; 0.5){
+      relPos.x -&#x3D; 1.0;
+    }else if(relPos.x &lt; -0.5) {
+      relPos.x +&#x3D; 1.0;
+    }
+    relPos *&#x3D; 2.0 * Scale;
+    vec4 diffTex;
+    if(relPos.x &gt; 1.0 || relPos.x &lt; -1.0 || relPos.y &gt; 1.0 || relPos.y &lt; -1.0){
+      diffTex &#x3D; texture2D(BackgroundTex, VertexUV);
+    }else {
+      diffTex &#x3D; texture2D(DetailTex, relPos * 0.5 + 0.5);
+    }
+    vec3 n &#x3D; normalize(Normal);
+    vec3 s &#x3D; normalize(LightPosition - Position);
+    vec3 v &#x3D; normalize(-Position);
+    vec3 h &#x3D; normalize(v + s);
+
+    vec3 ambient &#x3D; diffTex.rgb * AmbientIntensity;
+    vec3 diffuse &#x3D; diffTex.rgb * max(dot(s,n), 0.0) * LightIntensity;
+    vec3 specular &#x3D; SpecColor * pow(dot(n,h), Shininess) * LightIntensity;
+
+    return (ambient + diffuse + specular);
+  }
+
+  void main() {
+    gl_FragColor &#x3D; vec4(phong(), 1.0);
+  }
+&#x60;;
+
+/**
+ * Service to generate basic geometric mesh objects
+ */
+@Injectable({
+  providedIn: &quot;root&quot;
+})
+export class BasicObjectService {
+
+  /**
+   * Default constructor
+   */
+  constructor() { }
+
+  // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;
+  // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; PUBLIC FUNCTIONS &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;
+  // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;
+
+  /**
+   * Creates a sphere mesh
+   * 
+   * @param rad - radius of the sphere
+   * @param wSeg - amount of width segments of the sphere
+   * @param hSeg - amount of height segements of the sphere
+   * @param diffMap - diffuse map of the sphere
+   * @param alphaMap - alpha map of the sphere
+   * @param normalMap - normal map of the sphere
+   * @param specularMap - specular map of the sphere
+   * @param matType - material type to be used
+   * @param backSide - texture mapped on backside of the mesh
+   * @returns - mesh of the sphere
+   */
+  public generateSphereObject(
+    rad: number &#x3D; 1, wSeg: number &#x3D; 1, hSeg: number &#x3D; 1,
+    diffMap: THREE.Texture &#x3D; null, alphaMap: THREE.Texture &#x3D; null, normalMap: THREE.Texture &#x3D; null, specularMap: THREE.Texture &#x3D; null,
+    matType: MaterialType &#x3D; MaterialType.BASIC, backSide: boolean &#x3D; false
+  ): THREE.Mesh {
+
+    const geo: THREE.SphereGeometry &#x3D; new THREE.SphereGeometry(rad, wSeg, hSeg);
+    let mat: THREE.Material;
+    let mesh: THREE.Mesh&lt;THREE.BufferGeometry, THREE.Material&gt;;
+
+    mat &#x3D; this.createMaterial(matType, diffMap, alphaMap, normalMap, specularMap);
+    mesh &#x3D; this.createMesh(geo, mat, backSide);
+    return mesh;
+
+  }
+
+  /**
+   * Creates a box mesh
+   * 
+   * @param width - width of the box
+   * @param height - height of the box
+   * @param depth - depth of the box
+   * @returns - mesh of the box
+   */
+  public generateBoxObject(width: number &#x3D; 0.3, height: number &#x3D; 0.3, depth: number &#x3D; 0.3): THREE.Mesh {
+
+    const geo: THREE.BufferGeometry &#x3D; new THREE.BoxGeometry(width, height, depth);
+    const mat: THREE.MeshBasicMaterial &#x3D; new THREE.MeshPhongMaterial({ color: 0xff0000});
+    const mesh: THREE.Mesh&lt;THREE.BufferGeometry, THREE.Material&gt; &#x3D; new THREE.Mesh(geo, mat);
+    return mesh;
+
+  }
+
+  /**
+   * Creates a cynlinder mesh
+   * 
+   * @param radTop - radius of the top of the cylinder
+   * @param radBot - radius of the bottom of the cylinder
+   * @param height - height of the cylinder
+   * @param radialSeg - amount of radial segements of the cylinder
+   * @returns - mesh of the cylinder
+   */
+  public generateCylinderObject(radTop:number &#x3D; 0.2, radBot:number &#x3D; 0.2, height:number &#x3D; 0.2, radialSeg:number &#x3D; 32): THREE.Mesh {
+
+    const geo:THREE.BufferGeometry &#x3D; new THREE.CylinderGeometry(radTop, radBot, height, radialSeg);
+    const mat:THREE.Material &#x3D; new THREE.MeshPhongMaterial({ color: 0x00ff00 });
+    const mesh:THREE.Mesh&lt;THREE.BufferGeometry, THREE.Material&gt; &#x3D; new THREE.Mesh(geo, mat);
+    return mesh;
+ 
+  }
+
+  /**
+   * Ceates a cone mesh
+   * 
+   * @param rad - radius of the cone
+   * @param height - height of the cone
+   * @param radialSeg - amount of radial segemnts of the cone
+   * @returns - mesh of the cone
+   */
+  public generateConeObject(rad:number&#x3D;0.3, height:number&#x3D;0.6, radialSeg:number&#x3D;32): THREE.Mesh {
+
+    const geo:THREE.BufferGeometry &#x3D; new THREE.ConeGeometry(rad, height, radialSeg);
+    const mat:THREE.Material &#x3D; new THREE.MeshPhongMaterial({ color: 0xffff00 });
+    const mesh:THREE.Mesh&lt;THREE.BufferGeometry, THREE.Material&gt; &#x3D; new THREE.Mesh(geo, mat);
+    return mesh;
+
+  }
+
+  // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;
+  // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; PRIVATE FUNCTIONS &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;
+  // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;
+
+  /**
+   * Creates different materials based on material type
+   * 
+   * @param matType - material type to be created
+   * @param diffMap - diffuse map for the material
+   * @param alphaMap - alpha map for the material
+   * @param normalMap - normal map for the material
+   * @param specularMap - specular map for the material
+   * @returns - new material
+   */
+  private createMaterial(matType: MaterialType, diffMap: THREE.Texture, alphaMap?: THREE.Texture, normalMap?: THREE.Texture, specularMap?: THREE.Texture): THREE.Material {
+
+    let mat: THREE.Material;
+
+    switch (matType) {
+      case MaterialType.PHONG:
+        mat &#x3D; new THREE.MeshPhongMaterial({ map: diffMap, normalMap: normalMap, specularMap: specularMap });
+        break;
+      case MaterialType.LAMBERT:
+        mat &#x3D; new THREE.MeshLambertMaterial({ map: diffMap, alphaMap: alphaMap });
+        break;
+      case MaterialType.BASIC:
+        mat &#x3D; new THREE.MeshBasicMaterial({ map: diffMap });
+        break;
+      case MaterialType.SHADER:
+        mat &#x3D; new THREE.ShaderMaterial({
+          uniforms: {
+            DetailTex: { value: new THREE.Texture() },
+            BackgroundTex: { value: new THREE.Texture() },
+            LightPosition: { value: new THREE.Vector3(-200, 138, 200) },
+            LightIntensity: { value: new THREE.Vector3(0.8,0.8,0.8) },
+            Shininess: { value: 100.0 },
+            SpecColor: { value: new THREE.Color(0.2,0.2,0.2) },
+            Center: { value: new THREE.Vector2(0.5, 0.5) },
+            Scale: { value: 1.0 },
+            AmbientIntensity: { value: 0.2 }
+          },
+          vertexShader: _VS,
+          fragmentShader: _FS,
+        });
+        break;
+    }
+
+    //set transparency if aplphaMap is set
+    if (alphaMap !&#x3D;&#x3D; null) {
+      mat.transparent &#x3D; true;
+    }
+
+    return mat;
+
+  }
+
+  /**
+   * Creates a mesh with a texture mapped on the front or back side
+   * 
+   * @param geo - geomety from which a mesh is to be created
+   * @param mat - texture of the mesh
+   * @param backSide -  texture mapped on backside of the mesh
+   * @returns - created mesh
+   */
+  private createMesh(geo: THREE.BufferGeometry, mat: THREE.Material, backSide?: boolean): THREE.Mesh&lt;THREE.BufferGeometry, THREE.Material&gt; {
+
+    let model: THREE.Mesh&lt;THREE.BufferGeometry, THREE.Material&gt; &#x3D; new THREE.Mesh(geo, mat);
+    if (backSide) {
+      model.material.side &#x3D; THREE.BackSide;
+    }
+    return model;
+
+  }
+
+}
+
+/**
+ * Enum for the different material types
+ */
+export enum MaterialType {
+  PHONG,
+  LAMBERT,
+  BASIC,
+  SHADER
+}</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'BasicObjectService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

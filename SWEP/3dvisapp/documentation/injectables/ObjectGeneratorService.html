@@ -1,0 +1,2901 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>three-d-vis-app documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">three-d-vis-app documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li>ObjectGeneratorService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/service/object-generator/object-generator.service.ts</code>
+        </p>
+
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Service to create all specific objects displayed in the scene</p>
+
+            </p>
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#boxPrototype">boxPrototype</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#conePrototype">conePrototype</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#cylinderPrototype">cylinderPrototype</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Static</span>
+                                    <span class="modifier">Readonly</span>
+                                <a href="#EPSILON">EPSILON</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#addMapToEarth">addMapToEarth</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Static</span>
+                                <a href="#coordinate2Vector">coordinate2Vector</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#createEarth">createEarth</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#createMapOverlay">createMapOverlay</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#createOrbit">createOrbit</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#createSatellite">createSatellite</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#createSurfacePolygonMesh">createSurfacePolygonMesh</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#createTeleport">createTeleport</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#createTerminal">createTerminal</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Static</span>
+                                <a href="#divideLine">divideLine</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Static</span>
+                                <a href="#divideTriangle">divideTriangle</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Static</span>
+                                <a href="#divideTriangleOneLineDone">divideTriangleOneLineDone</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Static</span>
+                                <a href="#divideTriangleRecursive">divideTriangleRecursive</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Static</span>
+                                <a href="#divideTriangles">divideTriangles</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#setPositionRotation">setPositionRotation</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(basicObjectService: <a href="../injectables/BasicObjectService.html">BasicObjectService</a>, textureLoaderService: <a href="../injectables/TextureLoaderService.html">TextureLoaderService</a>, objectPlacerService: <a href="../injectables/ObjectPlacerService.html">ObjectPlacerService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/service/object-generator/object-generator.service.ts:35</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Construtor initializes the prototype meshes</p>
+</div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>basicObjectService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/BasicObjectService.html" target="_self" >BasicObjectService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <code><ul>
+<li>injected basicObjectService</li>
+</ul>
+</code>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>textureLoaderService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/TextureLoaderService.html" target="_self" >TextureLoaderService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <code><ul>
+<li>injected textureLoaderService</li>
+</ul>
+</code>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>objectPlacerService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ObjectPlacerService.html" target="_self" >ObjectPlacerService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <code><ul>
+<li>injected objectPlacerSevice</li>
+</ul>
+</code>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addMapToEarth"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            addMapToEarth
+                        </b>
+                        <a href="#addMapToEarth"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>addMapToEarth(canvas: HTMLCanvasElement, mesh: THREE.Mesh)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="93"
+                            class="link-to-prism">src/app/service/object-generator/object-generator.service.ts:93</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Adds the earth texture to the earth mesh via textureLoaderService</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>canvas</td>
+                                    <td>
+                                            <code>HTMLCanvasElement</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>canvas object of the scene</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>mesh</td>
+                                    <td>
+                                            <code>THREE.Mesh</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>mesh to be textured</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="coordinate2Vector"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Static</span>
+                            coordinate2Vector
+                        </b>
+                        <a href="#coordinate2Vector"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>coordinate2Vector(coordinate: <a href="../classes/Coordinate.html">Coordinate</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="217"
+                            class="link-to-prism">src/app/service/object-generator/object-generator.service.ts:217</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Converts a coordinate into a vector2</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>coordinate</td>
+                                    <td>
+                                                <code><a href="../classes/Coordinate.html" target="_self" >Coordinate</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>coordiante to be converted</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>THREE.Vector2</code>
+
+                    </div>
+                    <div class="io-description">
+                        <ul>
+<li>xy-coordinates</li>
+</ul>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createEarth"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            createEarth
+                        </b>
+                        <a href="#createEarth"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>createEarth(surfAlt: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, wSeg: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, hSeg: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="80"
+                            class="link-to-prism">src/app/service/object-generator/object-generator.service.ts:80</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Creates the erath sphere</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>surfAlt</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>surface altitude/radius of the earth sphere</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>wSeg</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>width segements of the earth sphere</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>hSeg</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>height segments of the earth sphere</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>THREE.Mesh</code>
+
+                    </div>
+                    <div class="io-description">
+                        <ul>
+<li>earth mesh</li>
+</ul>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createMapOverlay"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            createMapOverlay
+                        </b>
+                        <a href="#createMapOverlay"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>createMapOverlay(featureCollection: <a href="../classes/FeatureCollection.html">FeatureCollection</a>, surfAlt: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, color?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="159"
+                            class="link-to-prism">src/app/service/object-generator/object-generator.service.ts:159</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Creates mapoverlays</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>featureCollection</td>
+                                    <td>
+                                                <code><a href="../classes/FeatureCollection.html" target="_self" >FeatureCollection</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>geodata of the overlays to be created</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>surfAlt</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>surface altitude/radius of earth mesh</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>color</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>color of the overlay</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>THREE.Object3D</code>
+
+                    </div>
+                    <div class="io-description">
+                        <ul>
+<li>mapoverlay mesh group</li>
+</ul>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createOrbit"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            createOrbit
+                        </b>
+                        <a href="#createOrbit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>createOrbit(rad: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, wSeg: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, hSeg: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="64"
+                            class="link-to-prism">src/app/service/object-generator/object-generator.service.ts:64</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Creates the background of the scene</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>rad</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>radius of the mesh</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>wSeg</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>width segments of the mesh</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>hSeg</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>height segements of the mesh</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>THREE.Mesh</code>
+
+                    </div>
+                    <div class="io-description">
+                        <ul>
+<li>sphere mesh</li>
+</ul>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createSatellite"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            createSatellite
+                        </b>
+                        <a href="#createSatellite"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>createSatellite(satAlt: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, lng: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="142"
+                            class="link-to-prism">src/app/service/object-generator/object-generator.service.ts:142</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Creates satellite mesh</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>satAlt</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>surface altitude/radius of earth mesh</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>lng</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>longitude of the mesh</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>THREE.Mesh</code>
+
+                    </div>
+                    <div class="io-description">
+                        <ul>
+<li>satellite mesh</li>
+</ul>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createSurfacePolygonMesh"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            createSurfacePolygonMesh
+                        </b>
+                        <a href="#createSurfacePolygonMesh"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>createSurfacePolygonMesh(polygon: <a href="../classes/Polygon.html">Polygon</a>, surfAlt: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="230"
+                            class="link-to-prism">src/app/service/object-generator/object-generator.service.ts:230</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Creates a mesh at a specific height from a Polygon</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>polygon</td>
+                                    <td>
+                                                <code><a href="../classes/Polygon.html" target="_self" >Polygon</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>The Polygon to create a Mesh from</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>surfAlt</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>The surface altitude of the Polygon</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>THREE.Mesh</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>A THREE.Mesh representing the Polygon</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createTeleport"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            createTeleport
+                        </b>
+                        <a href="#createTeleport"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>createTeleport(surfAlt: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, lat: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, lng: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="126"
+                            class="link-to-prism">src/app/service/object-generator/object-generator.service.ts:126</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Creates teleport mesh</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>surfAlt</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>surface altitude/radius of teh earth mesh</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>lat</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>latitude of the mesh</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>lng</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>longitude of the mesh</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>THREE.Mesh</code>
+
+                    </div>
+                    <div class="io-description">
+                        <ul>
+<li>teleport mesh</li>
+</ul>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createTerminal"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            createTerminal
+                        </b>
+                        <a href="#createTerminal"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>createTerminal(surfAlt: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, lat: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, lng: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, alt: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="108"
+                            class="link-to-prism">src/app/service/object-generator/object-generator.service.ts:108</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Creates terminal mesh</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>surfAlt</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>surface altitude/radius of the earth mesh</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>lat</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>latitude of the mesh</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>lng</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>longitude of the mesh</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>alt</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>altitude of the mesh</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>THREE.Mesh</code>
+
+                    </div>
+                    <div class="io-description">
+                        <ul>
+<li>terminal mesh</li>
+</ul>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="divideLine"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Static</span>
+                            divideLine
+                        </b>
+                        <a href="#divideLine"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>divideLine(p1: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, p2: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, stepSize: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, vertices: THREE.Vector2[], divisionCache: Map<string | number[]>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="419"
+                            class="link-to-prism">src/app/service/object-generator/object-generator.service.ts:419</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Divides a line by adding new vertices so that each line segment is shorter then the value given.
+This will always look for already made vertices first via the division Cache</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>p1</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>The index of the first point</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>p2</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>The index of the second point</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>stepSize</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>The maximum length each line segment should be</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>vertices</td>
+                                    <td>
+                                            <code>THREE.Vector2[]</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>An array of vertices. New vertices will be added to this</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>divisionCache</td>
+                                    <td>
+                                            <code>Map&lt;string | number[]&gt;</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>A map of divisions of sides where new vertices have already been created</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>number[]</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>An array of indices of points between p1 and p2</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="divideTriangle"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Static</span>
+                            divideTriangle
+                        </b>
+                        <a href="#divideTriangle"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>divideTriangle(p1: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, p2: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, p3: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, stepSize: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, vertices: THREE.Vector2[], divisionCache: Map<string | number[]>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="283"
+                            class="link-to-prism">src/app/service/object-generator/object-generator.service.ts:283</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Divides a triangle into an array of triangles where each triangle has at most the specified sidelength</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>p1</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>The index of the first point of the triangle</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>p2</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>The index of the second point of the triangle</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>p3</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>The index of the third point of the triangle</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>stepSize</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>The maximum length each side should be after subdivision </li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>vertices</td>
+                                    <td>
+                                            <code>THREE.Vector2[]</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>The array of vertices</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>divisionCache</td>
+                                    <td>
+                                            <code>Map&lt;string | number[]&gt;</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>A map of divisions of sides where new triangles have already been created</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>[][]</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>An array of subdivided Triangle indices</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="divideTriangleOneLineDone"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Static</span>
+                            divideTriangleOneLineDone
+                        </b>
+                        <a href="#divideTriangleOneLineDone"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>divideTriangleOneLineDone(p1: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, p1p2: number[], p2: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, p2p3: number[], p3: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="373"
+                            class="link-to-prism">src/app/service/object-generator/object-generator.service.ts:373</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Divides a triangle where the side between p3 and p1 is already short enough
+and the other sides already have divisions into an array of triangles</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>p1</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>The index of the first point of the triangle</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>p1p2</td>
+                                    <td>
+                                            <code>number[]</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>An array of indices of points between p1 and p2</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>p2</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>The index of the second point of the triangle</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>p2p3</td>
+                                    <td>
+                                            <code>number[]</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>An array of indices of points between p2 and p3</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>p3</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>The index of the third point of the triangle</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>[][]</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>An array of triangle indices</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="divideTriangleRecursive"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Static</span>
+                            divideTriangleRecursive
+                        </b>
+                        <a href="#divideTriangleRecursive"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>divideTriangleRecursive(p1: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, p1p2: number[] | undefined, p2: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, p2p3: number[] | undefined, p3: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, p3p1: number[] | undefined, stepSize: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, vertices: THREE.Vector2[], divisionCache: Map<string | number[]>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="304"
+                            class="link-to-prism">src/app/service/object-generator/object-generator.service.ts:304</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Divides a triangle recursively into an array of triangles where each triangle has at most the specified sidelength</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>p1</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>The index of the first point of the triangle</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>p1p2</td>
+                                    <td>
+                                            <code>number[] | undefined</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>A list of points to divide the line between p1 and p2 into if one is already known, undefined otherwise</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>p2</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>The index of the second point of the triangle</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>p2p3</td>
+                                    <td>
+                                            <code>number[] | undefined</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>A list of points to divide the line between p2 and p3 into if one is already known, undefined otherwise</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>p3</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>The index of the third point of the triangle</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>p3p1</td>
+                                    <td>
+                                            <code>number[] | undefined</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>A list of points to divide the line between p3 and p1 into if one is already known, undefined otherwise</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>stepSize</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>The maximum length each side should be after subdivision </li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>vertices</td>
+                                    <td>
+                                            <code>THREE.Vector2[]</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>The array of vertices</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>divisionCache</td>
+                                    <td>
+                                            <code>Map&lt;string | number[]&gt;</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>A map of divisions of sides where new vertices have already been created</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>[][]</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>An array of subdivided Triangle indices</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="divideTriangles"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Static</span>
+                            divideTriangles
+                        </b>
+                        <a href="#divideTriangles"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>divideTriangles(indices: number[][], stepSize: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, vertices: THREE.Vector2[])</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="258"
+                            class="link-to-prism">src/app/service/object-generator/object-generator.service.ts:258</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Divides an array of triangles into a new array of triangles where each triangle has at most the specified sidelength</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>indices</td>
+                                    <td>
+                                            <code>number[][]</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>An array of triangle indices</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>stepSize</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>The maximum length each side should be after subdivision</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>vertices</td>
+                                    <td>
+                                            <code>THREE.Vector2[]</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>An array of vertices. New vertices will be added to this</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>[][]</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>An array of subdivided Triangle indices</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setPositionRotation"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            setPositionRotation
+                        </b>
+                        <a href="#setPositionRotation"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>setPositionRotation(mesh, coords: THREE.Vector3)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="202"
+                            class="link-to-prism">src/app/service/object-generator/object-generator.service.ts:202</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Sets the position and correct rotation of a mesh</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>mesh</td>
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>mesh to be positioned and rotated</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>coords</td>
+                                    <td>
+                                            <code>THREE.Vector3</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>latitude, longitude, altitude of the mesh</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+            <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="boxPrototype"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            boxPrototype</b>
+                            <a href="#boxPrototype"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>THREE.Mesh</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/service/object-generator/object-generator.service.ts:31</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Prototye mesh for a box</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="conePrototype"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            conePrototype</b>
+                            <a href="#conePrototype"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>THREE.Mesh</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/service/object-generator/object-generator.service.ts:35</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Prototype mesh for a cone</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="cylinderPrototype"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            cylinderPrototype</b>
+                            <a href="#cylinderPrototype"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>THREE.Mesh</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/service/object-generator/object-generator.service.ts:27</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Prototype mesh for a cylinder</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="EPSILON"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                                <span class="modifier">Static</span>
+                                <span class="modifier">Readonly</span>
+                            EPSILON</b>
+                            <a href="#EPSILON"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>0.4</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/service/object-generator/object-generator.service.ts:23</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Correction number</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &quot;@angular/core&quot;;
+import { BasicObjectService, MaterialType } from &quot;@service/basic-object/basic-object.service&quot;;
+import { TextureLoaderService } from &quot;@service/texture-loader/texture-loader.service&quot;;
+import { ObjectPlacerService } from &quot;@service/object-placer/object-placer.service&quot;;
+import * as THREE from &quot;three&quot;;
+import { FeatureCollection } from &quot;src/app/entity/geo/feature-collection.class&quot;;
+import { Coordinate } from &quot;src/app/entity/geo/coordinate.class&quot;;
+import { GeometryType } from &quot;src/app/entity/geo/geometry-type.enum&quot;;
+import { Polygon } from &quot;src/app/entity/geo/polygon.class&quot;;
+import { MultiPolygon } from &quot;src/app/entity/geo/multi-polygon.class&quot;;
+
+/**
+ * Service to create all specific objects displayed in the scene
+ */
+@Injectable({
+  providedIn: &quot;root&quot;
+})
+export class ObjectGeneratorService {
+
+  /**
+   * Correction number
+   */
+  private static readonly EPSILON: number &#x3D; 0.4;
+  /**
+   * Prototype mesh for a cylinder
+   */
+  private cylinderPrototype: THREE.Mesh;
+  /**
+   * Prototye mesh for a box
+   */
+  private boxPrototype: THREE.Mesh;
+  /**
+   * Prototype mesh for a cone
+   */
+  private conePrototype: THREE.Mesh;
+
+  /**
+   * Construtor initializes the prototype meshes
+   * 
+   * @param basicObjectService - injected basicObjectService
+   * @param textureLoaderService - injected textureLoaderService
+   * @param objectPlacerService - injected objectPlacerSevice
+   */
+  constructor(private basicObjectService: BasicObjectService, private textureLoaderService: TextureLoaderService, private objectPlacerService: ObjectPlacerService) {
+
+    this.cylinderPrototype &#x3D; this.basicObjectService.generateCylinderObject();
+    this.boxPrototype &#x3D; this.basicObjectService.generateBoxObject();
+    this.conePrototype &#x3D; this.basicObjectService.generateConeObject();
+
+  }
+
+  // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;
+  // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; PUBLIC FUNCTIONS &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;
+  // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;
+
+  /**
+   * Creates the background of the scene
+   * 
+   * @param rad - radius of the mesh
+   * @param wSeg - width segments of the mesh
+   * @param hSeg - height segements of the mesh
+   * @returns - sphere mesh
+   */
+  public createOrbit(rad: number, wSeg: number, hSeg: number): THREE.Mesh {
+
+    const texture: THREE.Texture &#x3D; this.textureLoaderService.loadOrbitTextures();
+    const orbit: THREE.Mesh &#x3D; this.basicObjectService.generateSphereObject(rad, wSeg, hSeg, texture, null, null, null, MaterialType.BASIC, true);
+    return orbit;
+
+  }
+
+  /**
+   * Creates the erath sphere
+   * 
+   * @param surfAlt - surface altitude/radius of the earth sphere
+   * @param wSeg - width segements of the earth sphere
+   * @param hSeg - height segments of the earth sphere
+   * @returns - earth mesh
+   */
+  public createEarth(surfAlt: number, wSeg: number, hSeg: number): THREE.Mesh {
+
+    const earth: THREE.Mesh &#x3D; this.basicObjectService.generateSphereObject(surfAlt, wSeg, hSeg, null, null, null, null, MaterialType.SHADER);
+    return earth;
+
+  }
+
+  /**
+   * Adds the earth texture to the earth mesh via textureLoaderService
+   * 
+   * @param canvas - canvas object of the scene
+   * @param mesh - mesh to be textured
+   */
+  public addMapToEarth(canvas: HTMLCanvasElement, mesh: THREE.Mesh): void {
+
+    this.textureLoaderService.convertMapdataToTexture(mesh, canvas);
+
+  }
+
+  /**
+   * Creates terminal mesh
+   * 
+   * @param surfAlt - surface altitude/radius of the earth mesh
+   * @param lat - latitude of the mesh
+   * @param lng - longitude of the mesh
+   * @param alt - altitude of the mesh
+   * @returns - terminal mesh
+   */
+  public createTerminal(surfAlt: number, lat: number, lng: number, alt: number): THREE.Mesh {
+
+    let mesh &#x3D; this.cylinderPrototype.clone();
+    let coords: THREE.Vector3 &#x3D; new THREE.Vector3();
+    coords.set(lat, lng, surfAlt + alt);
+    this.setPositionRotation(mesh, coords);
+    return mesh;
+
+  }
+
+  /**
+   * Creates teleport mesh
+   * 
+   * @param surfAlt - surface altitude/radius of teh earth mesh
+   * @param lat - latitude of the mesh
+   * @param lng - longitude of the mesh
+   * @returns - teleport mesh
+   */
+  public createTeleport(surfAlt: number, lat: number, lng: number): THREE.Mesh {
+
+    let mesh &#x3D; this.boxPrototype.clone();
+    let coords &#x3D; new THREE.Vector3(lat, lng, surfAlt);
+    this.setPositionRotation(mesh, coords);
+    return mesh;
+
+  }
+
+  /**
+   * Creates satellite mesh
+   * 
+   * @param satAlt - surface altitude/radius of earth mesh
+   * @param lng - longitude of the mesh
+   * @returns - satellite mesh
+   */
+  public createSatellite(satAlt: number, lng: number): THREE.Mesh {
+
+    let mesh &#x3D; this.conePrototype.clone();
+    let coords &#x3D; new THREE.Vector3(0, lng, satAlt);
+    this.setPositionRotation(mesh, coords);
+    return mesh;
+
+  }
+
+  /**
+   * Creates mapoverlays
+   * 
+   * @param featureCollection - geodata of the overlays to be created
+   * @param surfAlt - surface altitude/radius of earth mesh
+   * @param color - color of the overlay
+   * @returns - mapoverlay mesh group
+   */
+  public createMapOverlay(featureCollection: FeatureCollection, surfAlt: number, color?: string): THREE.Object3D {
+
+    let overlayMeshGroup &#x3D; new THREE.Group;
+    let material &#x3D; new THREE.MeshBasicMaterial();
+    material.color &#x3D; new THREE.Color(color ?? 0xffffff);
+    material.opacity &#x3D; 0.3;
+    material.transparent &#x3D; true;
+
+    for (let feature of featureCollection.features) {
+      let geometry &#x3D; feature.geometry;
+      if (geometry.type &#x3D;&#x3D;&#x3D; GeometryType.Polygon) {
+        let polygon &#x3D; geometry as Polygon;
+        let mesh &#x3D; this.createSurfacePolygonMesh(polygon, surfAlt);
+        mesh.material &#x3D; material;
+        overlayMeshGroup.add(mesh);
+      } else if (geometry.type &#x3D;&#x3D;&#x3D; GeometryType.MultiPolygon) {
+        let multiPolygon &#x3D; geometry as MultiPolygon;
+        let multiPolygonGroup &#x3D; new THREE.Group();
+        for (let polygon of multiPolygon.polygons) {
+          let mesh &#x3D; this.createSurfacePolygonMesh(polygon, surfAlt);
+          mesh.material &#x3D; material;
+          multiPolygonGroup.add(mesh);
+        }
+        overlayMeshGroup.add(multiPolygonGroup);
+      } else {
+        console.error(&quot;Unknown Geometry type &quot;, geometry.type);
+      }
+    }
+
+    return overlayMeshGroup;
+
+  }
+
+  // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;
+  // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; PRIVATE FUNCTIONS &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;
+  // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;
+
+  /**
+   * Sets the position and correct rotation of a mesh
+   * 
+   * @param mesh - mesh to be positioned and rotated
+   * @param coords - latitude, longitude, altitude of the mesh
+   */
+  private setPositionRotation(mesh, coords: THREE.Vector3): void {
+
+    const tLatLon &#x3D; this.objectPlacerService.transfromLatLon(coords);
+    const tCoords &#x3D; this.objectPlacerService.calcCoords(tLatLon);
+    mesh.position.set(tCoords.x, tCoords.y, tCoords.z);
+    mesh.rotation.set(0.0, -tLatLon.y, tLatLon.x + Math.PI * 0.5);
+
+  }
+
+  /**
+   * Converts a coordinate into a vector2
+   * 
+   * @param coordinate - coordiante to be converted
+   * @returns - xy-coordinates
+   */
+  private static coordinate2Vector(coordinate: Coordinate): THREE.Vector2 {
+
+    return new THREE.Vector2(coordinate.x, coordinate.y);
+
+  }
+
+  /**
+   * Creates a mesh at a specific height from a Polygon
+   * 
+   * @param polygon - The Polygon to create a Mesh from
+   * @param surfAlt - The surface altitude of the Polygon
+   * @returns A THREE.Mesh representing the Polygon
+   */
+  private createSurfacePolygonMesh(polygon: Polygon, surfAlt: number): THREE.Mesh {
+
+    let vertices &#x3D; polygon.coordinates.map(vertice &#x3D;&gt; ObjectGeneratorService.coordinate2Vector(vertice));
+    let indices &#x3D; THREE.ShapeUtils.triangulateShape(vertices, []);
+    let geometry &#x3D; new THREE.BufferGeometry();
+
+    const stepSize &#x3D; 5;
+
+    let remeshedIndices &#x3D; ObjectGeneratorService.divideTriangles(indices, stepSize, vertices);
+
+    let verticesTransformed &#x3D; vertices.map(vertex &#x3D;&gt; this.objectPlacerService.gps2Vec3(vertex, surfAlt + ObjectGeneratorService.EPSILON));
+    geometry.setFromPoints(verticesTransformed);
+    geometry.setIndex([].concat(...remeshedIndices).reverse());
+
+    let mesh &#x3D; new THREE.Mesh();
+    mesh.geometry &#x3D; geometry;
+    return mesh;
+
+  }
+
+  /**
+   * Divides an array of triangles into a new array of triangles where each triangle has at most the specified sidelength
+   * 
+   * @param indices - An array of triangle indices
+   * @param stepSize - The maximum length each side should be after subdivision
+   * @param vertices - An array of vertices. New vertices will be added to this
+   * @returns An array of subdivided Triangle indices
+   */
+  private static divideTriangles(indices: number[][], stepSize: number, vertices: THREE.Vector2[]): number[][] {
+
+    // loop Over all triangles and divide each one
+    let newTriangles: number[][] &#x3D; [];
+    let divisionCache &#x3D; new Map&lt;string, number[]&gt;();
+    for (let [p1, p2, p3] of indices) {
+      let trianglesToAdd &#x3D; this.divideTriangle(p1, p2, p3, stepSize, vertices, divisionCache);
+      newTriangles.push(...trianglesToAdd);
+    }
+
+    return newTriangles;
+
+  }
+
+  /**
+   * Divides a triangle into an array of triangles where each triangle has at most the specified sidelength
+   * 
+   * @param p1 - The index of the first point of the triangle
+   * @param p2 - The index of the second point of the triangle
+   * @param p3 - The index of the third point of the triangle
+   * @param stepSize - The maximum length each side should be after subdivision 
+   * @param vertices - The array of vertices
+   * @param divisionCache - A map of divisions of sides where new triangles have already been created
+   * @returns An array of subdivided Triangle indices
+   */
+  private static divideTriangle(p1: number, p2: number, p3: number, stepSize: number, vertices: THREE.Vector2[], divisionCache: Map&lt;string, number[]&gt;): number[][] {
+
+    // Start recursive division with unknown side divisions
+    return this.divideTriangleRecursive(p1, undefined, p2, undefined, p3, undefined, stepSize, vertices, divisionCache);
+
+  }
+
+  /**
+   * Divides a triangle recursively into an array of triangles where each triangle has at most the specified sidelength
+   * 
+   * @param p1 - The index of the first point of the triangle
+   * @param p1p2 - A list of points to divide the line between p1 and p2 into if one is already known, undefined otherwise
+   * @param p2 - The index of the second point of the triangle
+   * @param p2p3 - A list of points to divide the line between p2 and p3 into if one is already known, undefined otherwise
+   * @param p3 - The index of the third point of the triangle
+   * @param p3p1 - A list of points to divide the line between p3 and p1 into if one is already known, undefined otherwise
+   * @param stepSize - The maximum length each side should be after subdivision 
+   * @param vertices - The array of vertices
+   * @param divisionCache - A map of divisions of sides where new vertices have already been created
+   * @returns An array of subdivided Triangle indices
+   */
+  private static divideTriangleRecursive(p1: number, p1p2: number[] | undefined, p2: number, p2p3: number[] | undefined, p3: number, p3p1: number[] | undefined, stepSize: number, vertices: THREE.Vector2[], divisionCache: Map&lt;string, number[]&gt;): number[][] {
+
+    // Calculate divisions for sides with undifined side divisions
+    if (p1p2 &#x3D;&#x3D;&#x3D; undefined) {
+      p1p2 &#x3D; this.divideLine(p1, p2, stepSize, vertices, divisionCache);
+    }
+    if (p2p3 &#x3D;&#x3D;&#x3D; undefined) {
+      p2p3 &#x3D; this.divideLine(p2, p3, stepSize, vertices, divisionCache);
+    }
+    if (p3p1 &#x3D;&#x3D;&#x3D; undefined) {
+      p3p1 &#x3D; this.divideLine(p3, p1, stepSize, vertices, divisionCache);
+    }
+
+    if (p1p2.length &#x3D;&#x3D;&#x3D; 0 &amp;&amp; p2p3.length &#x3D;&#x3D;&#x3D; 0 &amp;&amp; p3p1.length &#x3D;&#x3D;&#x3D; 0) {
+      // We are done
+      return [[p1, p2, p3]];
+    }
+
+    // Triangulate remaining Triangle if one or more sides are divided enough
+    if (p1p2.length &#x3D;&#x3D; 0) {
+      return this.divideTriangleOneLineDone(p2, p2p3, p3, p3p1, p1);
+    }
+    if (p2p3.length &#x3D;&#x3D; 0) {
+      return this.divideTriangleOneLineDone(p3, p3p1, p1, p1p2, p2);
+    }
+    if (p3p1.length &#x3D;&#x3D; 0) {
+      return this.divideTriangleOneLineDone(p1, p1p2, p2, p2p3, p3);
+    }
+
+    // Get indices of center indices within each side
+    let center1 &#x3D; Math.floor(p1p2.length / 2);
+    let center2 &#x3D; Math.floor(p2p3.length / 2);
+    let center3 &#x3D; Math.floor(p3p1.length / 2);
+
+    // Get indices of center points for each side
+    let p12 &#x3D; p1p2[center1];
+    let p23 &#x3D; p2p3[center2];
+    let p31 &#x3D; p3p1[center3];
+
+    // Divide sides
+    let p1p12 &#x3D; p1p2.slice(0, center1);
+    let p12p2 &#x3D; p1p2.slice(center1 + 1);
+    let p2p23 &#x3D; p2p3.slice(0, center2);
+    let p23p3 &#x3D; p2p3.slice(center2 + 1);
+    let p3p31 &#x3D; p3p1.slice(0, center3);
+    let p31p1 &#x3D; p3p1.slice(center3 + 1);
+
+    // Call division recursively
+    let centerTri &#x3D; this.divideTriangleRecursive(p12, undefined, p23, undefined, p31, undefined, stepSize, vertices, divisionCache);
+    let cornerTri1 &#x3D; this.divideTriangleRecursive(p1, p1p12, p12, undefined, p31, p31p1, stepSize, vertices, divisionCache);
+    let cornerTri2 &#x3D; this.divideTriangleRecursive(p2, p2p23, p23, undefined, p12, p12p2, stepSize, vertices, divisionCache);
+    let cornerTri3 &#x3D; this.divideTriangleRecursive(p3, p3p31, p31, undefined, p23, p23p3, stepSize, vertices, divisionCache);
+
+    // return union of results
+    return [...centerTri, ...cornerTri1, ...cornerTri2, ...cornerTri3];
+
+  }
+
+  /**
+   * Divides a triangle where the side between p3 and p1 is already short enough
+   * and the other sides already have divisions into an array of triangles
+   * 
+   * @param p1 - The index of the first point of the triangle
+   * @param p1p2 - An array of indices of points between p1 and p2
+   * @param p2 - The index of the second point of the triangle
+   * @param p2p3 - An array of indices of points between p2 and p3
+   * @param p3 - The index of the third point of the triangle
+   * @returns An array of triangle indices
+   */
+  private static divideTriangleOneLineDone(p1: number, p1p2: number[], p2: number, p2p3: number[], p3: number): number[][] {
+
+    let newTriangles: number[][] &#x3D; [];
+
+    // Shorten longer side until both sides have same number of divisions
+    while (p1p2.length &gt; p2p3.length) {
+      let pNew &#x3D; p1p2.shift();
+      newTriangles.push([p1, pNew, p3]);
+      p1 &#x3D; pNew;
+    }
+    while (p2p3.length &gt; p1p2.length) {
+      let pNew &#x3D; p2p3.pop();
+      newTriangles.push([p1, pNew, p3]);
+      p3 &#x3D; pNew;
+    }
+
+    // For each pair add 2 Triangles then overwrite p1 and p3
+    while (p1p2.length &gt; 0) {
+      let pNew1 &#x3D; p1p2.shift();
+      let pNew2 &#x3D; p2p3.pop();
+
+      newTriangles.push([p1, pNew2, p3]);
+      newTriangles.push([p1, pNew1, pNew2]);
+
+      p1 &#x3D; pNew1;
+      p3 &#x3D; pNew2;
+    }
+
+    // Add final triangle
+    newTriangles.push([p1, p2, p3]);
+
+    return newTriangles;
+
+  }
+
+  /**
+   * Divides a line by adding new vertices so that each line segment is shorter then the value given.
+   * This will always look for already made vertices first via the division Cache
+   * 
+   * @param p1 - The index of the first point
+   * @param p2 - The index of the second point
+   * @param stepSize - The maximum length each line segment should be
+   * @param vertices - An array of vertices. New vertices will be added to this
+   * @param divisionCache - A map of divisions of sides where new vertices have already been created
+   * @returns An array of indices of points between p1 and p2
+   */
+  private static divideLine(p1: number, p2: number, stepSize: number, vertices: THREE.Vector2[], divisionCache: Map&lt;string, number[]&gt;): number[] {
+
+    let dist &#x3D; vertices[p1].distanceTo(vertices[p2]);
+    // Distance is smaller then stepSize &#x3D;&gt; no need to divide
+    if (dist &lt; stepSize) {
+      return [];
+    }
+
+    // If we have divided this line before return the saved division
+    let division &#x3D; divisionCache.get([p1, p2].toString());
+    if (division !&#x3D;&#x3D; undefined) {
+      // return a copy since the cached version should never change
+      return division.slice();
+    }
+    division &#x3D; divisionCache.get([p2, p1].toString());
+    if (division !&#x3D;&#x3D; undefined) {
+      // return a copy since the cached version should never change
+      return division.reverse().slice();
+    }
+
+    let steps &#x3D; Math.ceil(dist / stepSize);
+
+    let newIndices: number[] &#x3D; [];
+    for (let step &#x3D; 1; step &lt; steps; step++) {
+      let newVertex &#x3D; new THREE.Vector2().lerpVectors(vertices[p1], vertices[p2], step / steps);
+      newIndices.push(vertices.length);
+      vertices.push(newVertex);
+    }
+
+    // Add new division to cache
+    if (newIndices.length &gt; 0) {
+      divisionCache.set([p1, p2].toString(), newIndices);
+    }
+
+    // return a copy since the cached version should never change
+    return newIndices.slice();
+
+  }
+
+}</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'ObjectGeneratorService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

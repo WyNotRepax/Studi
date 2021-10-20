@@ -1,0 +1,345 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>three-d-vis-app documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">three-d-vis-app documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content miscellaneous-variables">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   
+
+<ol class="breadcrumb">
+  <li>Miscellaneous</li>
+  <li>Variables</li>
+</ol>
+
+<section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <ul class="index-list">
+                        <li>
+                            <a href="#_FS" title="src/app/service/basic-object/basic-object.service.ts"><b>_FS</b>&nbsp;&nbsp;&nbsp;(src/.../basic-object.service.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#_VS" title="src/app/service/basic-object/basic-object.service.ts"><b>_VS</b>&nbsp;&nbsp;&nbsp;(src/.../basic-object.service.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#DEG_2_RAD" title="src/app/service/scene/scene.service.ts"><b>DEG_2_RAD</b>&nbsp;&nbsp;&nbsp;(src/.../scene.service.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#MaterialModules" title="src/app/material/material.module.ts"><b>MaterialModules</b>&nbsp;&nbsp;&nbsp;(src/.../material.module.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#RAD_2_DEG" title="src/app/service/scene/scene.service.ts"><b>RAD_2_DEG</b>&nbsp;&nbsp;&nbsp;(src/.../scene.service.ts)</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    <h3>src/app/service/basic-object/basic-object.service.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_FS"></a>
+                        <span class="name">
+                            <b>
+                            _FS</b>
+                            <a href="#_FS"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x60;
+  varying vec3 Normal;
+  varying vec3 Position;
+  varying vec2 VertexUV;
+
+  uniform sampler2D DetailTex;
+  uniform sampler2D BackgroundTex;
+  uniform vec2 Center;
+  uniform float Scale;
+  uniform vec3 LightPosition;
+  uniform vec3 LightIntensity;
+  uniform float Shininess;
+  uniform float AmbientIntensity;
+  uniform vec3 SpecColor;
+
+  vec3 phong() {
+    vec2 relPos &#x3D; (VertexUV - Center);
+    if(relPos.x &gt; 0.5){
+      relPos.x -&#x3D; 1.0;
+    }else if(relPos.x &lt; -0.5) {
+      relPos.x +&#x3D; 1.0;
+    }
+    relPos *&#x3D; 2.0 * Scale;
+    vec4 diffTex;
+    if(relPos.x &gt; 1.0 || relPos.x &lt; -1.0 || relPos.y &gt; 1.0 || relPos.y &lt; -1.0){
+      diffTex &#x3D; texture2D(BackgroundTex, VertexUV);
+    }else {
+      diffTex &#x3D; texture2D(DetailTex, relPos * 0.5 + 0.5);
+    }
+    vec3 n &#x3D; normalize(Normal);
+    vec3 s &#x3D; normalize(LightPosition - Position);
+    vec3 v &#x3D; normalize(-Position);
+    vec3 h &#x3D; normalize(v + s);
+
+    vec3 ambient &#x3D; diffTex.rgb * AmbientIntensity;
+    vec3 diffuse &#x3D; diffTex.rgb * max(dot(s,n), 0.0) * LightIntensity;
+    vec3 specular &#x3D; SpecColor * pow(dot(n,h), Shininess) * LightIntensity;
+
+    return (ambient + diffuse + specular);
+  }
+
+  void main() {
+    gl_FragColor &#x3D; vec4(phong(), 1.0);
+  }
+&#x60;</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>fragment shader - phong shading</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_VS"></a>
+                        <span class="name">
+                            <b>
+                            _VS</b>
+                            <a href="#_VS"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x60;
+  varying vec3 Normal;
+  varying vec3 Position;
+  varying vec2 VertexUV;
+
+  void main() {
+    VertexUV &#x3D; uv;
+    Normal &#x3D; normalize(normalMatrix * normal);
+    Position &#x3D; vec3(modelViewMatrix * vec4(position, 1.0));
+    gl_Position &#x3D; projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+  }
+&#x60;</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>vertex shader</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/app/service/scene/scene.service.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="DEG_2_RAD"></a>
+                        <span class="name">
+                            <b>
+                            DEG_2_RAD</b>
+                            <a href="#DEG_2_RAD"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>Math.PI / 180</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Calculation degree to radians</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="RAD_2_DEG"></a>
+                        <span class="name">
+                            <b>
+                            RAD_2_DEG</b>
+                            <a href="#RAD_2_DEG"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>1 / DEG_2_RAD</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Calculation radians to degree</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/app/material/material.module.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="MaterialModules"></a>
+                        <span class="name">
+                            <b>
+                            MaterialModules</b>
+                            <a href="#MaterialModules"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[
+  MatSidenavModule,
+  MatSlideToggleModule,
+  MatToolbarModule,
+  MatIconModule,
+  MatListModule
+]</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Module for initializing the angular material UI component library</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'miscellaneous-variables';
+            var COMPODOC_CURRENT_PAGE_URL = 'variables.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

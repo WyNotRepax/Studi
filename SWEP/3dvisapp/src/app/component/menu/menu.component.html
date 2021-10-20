@@ -1,0 +1,38 @@
+<div class="slider-container">
+    <h1 class="side-nav-headline">Anzeige</h1>
+    <mat-list>
+        <mat-list-item>
+            <mat-slide-toggle class="text slider" [(ngModel)]="showTeleports" (change)="toggleTeleports()">Teleports (rot)</mat-slide-toggle>
+        </mat-list-item>
+        <mat-list-item>
+            <mat-slide-toggle class="text slider" [(ngModel)]="showTerminals" (change)="toggleTerminals()">Terminals (grün)</mat-slide-toggle>
+        </mat-list-item>
+        <mat-list-item>
+            <mat-slide-toggle class="text slider" [(ngModel)]="showSatellites" (change)="toggleSatellites()">Satelliten (gelb)</mat-slide-toggle>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>
+            <mat-slide-toggle class="text slider" [(ngModel)]="showBeams" (change)="toggleBeams()">Beams</mat-slide-toggle>
+        </mat-list-item>
+    </mat-list>
+</div>
+
+<div>
+    <h1>Steuerung</h1>
+    <mat-list>
+        <h2 >Kamera bewegen:</h2>
+        <mat-list-item>
+            <mat-icon class="controls-icon">mouse</mat-icon>Linke Maustaste + Maus bewegen
+        </mat-list-item>
+        <mat-list-item>
+            <mat-icon class="controls-icon">keyboard</mat-icon>Pfeiltasten
+        </mat-list-item>
+        <h2 class="sub-title">Kamera zoomen:</h2>
+        <mat-list-item>
+            <mat-icon class="controls-icon">mouse</mat-icon>Mausrad
+        </mat-list-item>
+        <mat-list-item>
+            <mat-icon class="controls-icon">keyboard</mat-icon>+ und -
+        </mat-list-item>
+    </mat-list>
+</div>

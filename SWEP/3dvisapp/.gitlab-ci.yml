@@ -1,0 +1,52 @@
+variables:
+  APP_OUTPUT_PATH: "$CI_PROJECT_DIR/dist/threeD-vis-app"
+  DEPLOY_PATH: "/var/www/3dvisapp"
+
+stages:
+  - build
+  - deploy
+
+
+build_app:
+  stage: build
+  image: node:12-alpine
+  #dependencies:
+  #  - install_dependencies
+  only:
+    refs:
+      - merge_requests
+      - master
+  script:
+    - apk add --no-cache python3 py3-pip make
+    - npm install
+    #- yarn ngcc --properties es2015 --create-ivy-entry-points
+    - ./node_modules/.bin/ng build --prod
+  artifacts:
+    name: "angular-app-pipeline"
+    paths:
+      - $APP_OUTPUT_PATH
+  #cache:
+  #  key:
+  #    files:
+  #      - yarn.lock
+  #  paths:
+  #    - node_modules
+  #  policy: pull
+
+deploy:
+  image: debian:stable
+  stage: deploy
+  only:
+    refs:
+      - merge_requests
+      - master
+  dependencies:
+    - build_app
+  script:
+    - apt update -y && apt install sshpass -y
+    - sshpass -V
+    - export SSHPASS=$USER_PASS 
+    - cd $APP_OUTPUT_PATH/
+    - sshpass -e scp -o stricthostkeychecking=no -r $(pwd) $SSH_USER@$SSH_HOST:$DEPLOY_PATH
+
+

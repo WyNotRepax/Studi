@@ -1,0 +1,13 @@
+@import '~@angular/material/theming';
+
+$main-theme-primary: mat-palette($mat-grey, 900);
+$main-theme-accent: mat-palette($mat-green, 500);
+$main-theme-typography: mat-typography-config($font-family: "Poppins");
+
+$main-theme: mat-dark-theme((
+  color: (
+    primary: $main-theme-primary,
+    accent: $main-theme-accent,
+  ),
+  typography: $main-theme-typography
+));

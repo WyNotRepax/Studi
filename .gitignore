@@ -1,0 +1,25 @@
+#Kleuker SEU
+OOAD/kleukersSEU
+
+VTS/tomcat
+
+#Compiled Sources + Temporary files
+*.class
+*.o
+*.obj
+*.exe
+*.zip
+*.rar
+
+*.log
+*.tlog
+
+#System Information
+*.DS_Store
+
+#Precompiled headers
+*.ipch
+*.index
+
+#Repository recursion
+OOAD/Projekt
